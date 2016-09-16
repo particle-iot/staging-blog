@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle Interactions: Sprint 41 with William Hart (Transcript) &mdash; Particle Blog</title>
+    
+    <link rel="stylesheet" href="http://spark.github.io/staging-blog/assets/main.css">
+    <link rel="shortcut icon" href="http://spark.github.io/staging-blog/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="http://spark.github.io/staging-blog/images/particle-horizontal-dark.png"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Particle Blog" />
+    <meta name="title" content="Particle Interactions: Sprint 41 with William Hart (Transcript) ">
+    <link rel="canonical" href="http://spark.github.io/staging-blog/2015/08/17/particle-interactions-sprint-41/">
+    
+    
+    <meta property="og:title" content="Particle Interactions: Sprint 41 with William Hart (Transcript) "/>
+    <meta property="og:url" content="http://spark.github.io/staging-blog/2015/08/17/particle-interactions-sprint-41/"/>
+    
+    <meta property="og:image" content="http://spark.github.io/staging-blog/images/particle-horizontal-dark.png"/>
+    
+    
+    <meta property="og:description" content="Head of Manufacturing Will Hart talks about the challenges of manufacturing and shipping a product."/>
+    <meta name="description" content="Head of Manufacturing Will Hart talks about the challenges of manufacturing and shipping a product."/>
+    
+    <meta property="og:site_name" content="Particle Blog">
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6107112/665726/css/fonts.css" />
+</head>
+<body>
+
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="https://www.particle.io/">
+                <img src="http://spark.github.io/staging-blog/images/particle-horizontal-dark.png" alt="Inc">
+            </a>
+            <a href="http://spark.github.io/staging-blog" class="home">Blog</a>
+            <a href="https://store.particle.io/">Product</a>
+            
+        </nav>
+        <nav class="tagline">
+          <a href="https://store.particle.io/" target="_blank" class="btn btn-outline">Buy Now</a>
+        </nav>
+    </header>
+</section>
+
+
+<div class="article-cover">
+    <div>
+        <img src="http://spark.github.io/staging-blog/images/triangles.png" class="image">
+    </div>
+</div>
+
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="Christine Sunu" target="_blank">Christine Sunu</a> &mdash;
+                <time pubdate datetime="2015-17-August" title="August 17, 2015">August 17, 2015</time>
+            </div>
+            <h1 class="title">Particle Interactions: Sprint 41 with William Hart (Transcript)</h1>
+            
+        </header>
+
+        <section>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JnI2VjXEAiU" frameborder="0" allowfullscreen></iframe>
+
+<p><strong>Christine:</strong> Hi. Hi everybody.</p>
+
+<p><strong>Will:</strong> Hello.</p>
+
+<p><strong>Christine:</strong> We are here on this opening up to talk to Will, the Head of Manufacturing and Hardware at Particle. He is an excellent fun person.</p>
+
+<p><strong>Will:</strong> Great.</p>
+
+<p><strong>Christine:</strong> Yeah, I am hoping that this is working again. This is the second time we’ve done this. Hopefully, it will work. I think there is a little bit of a lag so it currently says that live stream is still starting in the other channel.</p>
+
+<p><strong>Will:</strong> Here we go.</p>
+
+<p><strong>Christine:</strong> Will, why don’t you tell us a little bit about the world of hardware at Particle and what the next six months are looking like?</p>
+
+<p><strong>Will:</strong> Sure. To really know where you’re going, you have to know where you’re from. Just a recap for everybody out there. Our first product was the Core. That was our first generation Wi-Fi kit. We shipped that at the end of 2014, I guess it was. The product we’ve been shipping out the doors over the last few months has been the Photon, which is the second generation Wi-Fi dev kit. It’s like the sequel to the Core in a lot of ways.</p>
+
+<p>We really focus on Wi-Fi. Going forward, we’re looking to expand the impact that we can have with respect to building connected devices, and not all connected devices are Wi-Fi devices. Up next, we’ve got the <a href="https://www.particle.io/cellular">Electron</a>, which a cellular dev kit. Then, we launched <a href="https://www.kickstarter.com/projects/sparkdevices/spark-electron-cellular-dev-kit-with-a-simple-data">a Kickstarter for it</a> back in the early part of the year and that is in just super active development right now and it’s something that we’re really, really excited about. We’ve been spending a lot of time and energy into solving all the different challenges that cellular has that Wi-Fi doesn’t have.</p>
+
+<p>Then, going forward, after that-- we always have a plan but it’s always a rough plan, because we always like to respond to new things as they come up. We’ve been doing a lot of investigating into things like Sub-GHz communication. Is it possible to attach a really, really cheap little node to the Wi-Fi or the cellular development kit so that it can communicate with other devices that have that radio on, and you can really increase the breath of your fluid of devices by having a bunch of sensors that all talk to each other, and then a single device connected to the internet that can relay it all back.</p>
+
+<p>That’s it right now. We haven’t committed to anything beyond the Electron but at the sides, continue to improve the Wi-Fi and cellular development kits. In the future, we’ll also be tentatively exploring other ways we can improve the wireless ecosystem of Particle’s platform.</p>
+
+<p><strong>Christine:</strong> Very cool.</p>
+
+<p><strong>Will:</strong> Yeah, it’s cool.</p>
+
+<p><strong>Christine:</strong> That sounds really exciting, Will.</p>
+
+<p><strong>Will:</strong> Yeah, it is exciting to all of us.</p>
+
+<p><strong>Christine:</strong> Do you want to tell the folks at home a little bit about the day-to-day of Will?</p>
+
+<p><strong>Will:</strong> Sure. Day-to-day, Will is divided into two different Wills. There is the Will that you are speaking to right now and then there’s China Will, who is a totally different Will and has totally different jobs. I will start with what I do in China because that was my first job at the company. I was basically the on-the-ground China guy. Every time we develop a new product, there’s a lot of work that needs to be done whether it’s sourcing, new packaging, or little things like breadboards and accessories, or electrical components for all the new dev kits and shields that we make. A lot of sourcing stuff going on, a lot of talking with manufacturers to improve existing production, solving problems that come up during manufacturing which there are just dozens of every single time you try to make something. Building out our supply chain. Key partners, a lot of them do manufacturing and distribution in China or around China. Having those kinds of relationship-building meetings. Then, just like, stuff with my hands. A lot of it is building prototypes, building test fixtures. Every time I go, I usually have a day or two where it’s just maybe 16 or 18 hours of straight-up assembly, usually before my flight to try to finish it all up. That’s China Will.</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/will-assembly.jpg"></div>
+
+<p><strong>Will:</strong> Then, United States Will-- which is who I am right now-- has a lot of the same concerns but has a very different workload in the US. It’s a lot of emailing and more project management instead of execution. Having to do things like building schedules, working with our hardware team, the firmware team in the US, India, and Norway, and then also with our hardware team and manufacturing team in China to make sure that all the pieces are getting pushed forward at the right speed so that when it’s finally time to manufacture something, we aren’t surprised and don’t suddenly have something that’s not ready to go. A lot more coordination and a lot more just management stuff. I like them both in different ways, but they’re definitely really different.</p>
+
+<p><strong>Christine:</strong> Yeah, sounds different.</p>
+
+<p><strong>Will:</strong> Yeah, super different. Less lead in the US. More lead in China, prototype assembly.</p>
+
+<p><strong>Christine:</strong> Yeah. You’ve been with the company for a while. You actually went through an accelerator in the past with Zach, and Zachary (Doc), and Steph was involved too around that time.</p>
+
+<p><strong>Will:</strong> Yes, she was deeply involved. She was United States Stephanie. She never developed a Chinese alter ego yet but maybe one day, we’ll get her there.</p>
+
+<p><strong>Christine:</strong> You’ve basically helped manufacture and ship two of the boards. What are some of the challenges of manufacturing and shipping a product?</p>
+
+<p><strong>Will:</strong> There are a lot of them, and I even struggle to try to describe them in any broad sense because one of the interesting things about manufacturing is that the problems are just so different every single time-- and hopefully they’re different because you learn something from the last run, the last time you did it, and carries those lessons into the next time. There’s never going to be no problems-- that’s really just unrealistic. But there can be fewer problems, and there can be problems that aren’t as serious.</p>
+
+<p>I think we have done a pretty good job of waiting these super serious problems and ones, I am talking about recalls. It is like, “No product recalls, great. No exploding batteries,” or anything like that because that happens. It’s crazy. That happens. It happened to-- not related to hardware but-- it happened to Dropcam a couple of weeks ago. They recalled the whole bunch of hardware that had been borked over the air-- our stream ended.</p>
+
+<p><strong>Christine:</strong> The stream ended. The literal stream ended. Netflix is saying you should watch the Wet Hot American Summer show. That’s probably a good recommendation.</p>
+
+<p><strong>Will:</strong> I’ll just do that one again.</p>
+
+<p><strong>Christine:</strong> Starting over. That sounds good. Yeah, we had a fire last time but it’s sweltering in here so we thought it would help to have a cool stream instead. There’s flowers too, you can watch flowers.</p>
+
+<p><strong>Will:</strong> All right, we will watch flowers.</p>
+
+<p><strong>Christine:</strong> Yeah, flowers sound good.</p>
+
+<p><strong>Will:</strong> Great.</p>
+
+<p><strong>Christine:</strong> Wow, that’s great.</p>
+
+<p><strong>Will:</strong> Subtitles.</p>
+
+<p><strong>Christine:</strong> Subtitles—“Birds Chirping.”</p>
+
+<p><strong>Will:</strong> Okay.</p>
+
+<p><strong>Christine:</strong> Okay, so you were saying?</p>
+
+<p><strong>Will:</strong> I was saying, just a lot of different kinds of problems. They range from organizational problems-- like most recently with the Photon, we had a miscommunication over parts with our contract manufacturer. This was like a management and purchasing error by our contract manufacturer that was unavoidable in a sense that there’s only so much you can do to confirm that your partners are doing their job. At the end of the day, your manufacturing partners are also just people and they make mistakes.</p>
+
+<p>An example of the Photon is like... There’s a certain part. I can confirm that it’s purchased. Yes, it’s purchased. Then, when the part doesn’t show up, and you go back, and you check, you say, “Actually, that part never got purchased from a correct distributor.” It can be just communication things. When you’re doing manufacturing in China, you have to watch out for quality. It can be inconsistent even if it’s not intentionally bad.</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/core-reversed-headers.jpg"></div>
+
+<p>Packaging is one where quality often times on first runs is really all over the place. Scattershot. Where 30% of the items in a production run from packaging may not be just packed. Even after golden samples have been approved, even after you have clear communication, in first runs, things go wrong. Sometimes, it’s just things turn out wrong.</p>
+
+<p>Sometimes, it is scheduling things like delays are caused by manufacturers who have availability this week but then, they have other customers who are using their equipment. It gets locked up and they don’t have the ability to schedule you into the time that you want to be scheduled into. It’s all sort of problems. Actually, I say it all the time, this is a working analogy, and actually, it’s a good time to put on my captain’s hat.</p>
+
+<p><strong>Christine:</strong> Captain Will.</p>
+
+<p><strong>Will:</strong> I think of manufacturing is a lot like trying to repair a boat that is racing around the world while it’s on the water. Which is to say that our supply chain has leaks in it, as does everybody’s. And the challenge is you can’t just stop the boat. You can’t just pull it up on to the land and spend three months working on it. You have to keep going. There are going to be issues, and you have to figure out how to plug them up, and patch them up while there are just new ones that are exploding all around you.</p>
+
+<p>It’s a lot like that. It’s a lot like trying to deal with issues that pop up and some of them are really easy to deal with, and some of them are not. And maintaining this longer term perspective of we need to be slowly improving things over time, we need to be making decisions that don’t increase our manufacturing risk. We need to make sure that at the end of the day, the thing that we’re delivering is something that we’re proud of and that we can stand behind.</p>
+
+<p>It’s complicated. There are a lot of different kinds of challenges, but that’s what keeps things interesting, frankly. It’s all the different headaches that you run into along the way.</p>
+
+<p><strong>Christine:</strong> Yeah, even when you’re dealing with all this stuff, you come into the office, and you’re very like chipper and lighthearted about it. It must still, on some level, be fun.</p>
+
+<p><strong>Will:</strong> Yeah, it is fun. China Will is a little bit more temperamental, you could say. He gets frustrated more easily but that’s usually because I am hungry more than anything. But yes, I would say that you have to have a good attitude. Actually, one interesting thing is that when things go wrong-- because things have gone wrong so often, you don’t freak out right away. It’s not like, “Oh no, something went wrong.” It is like, “Okay, another thing went wrong. What is it? Let’s figure it out and get to the bottom of it.”</p>
+
+<p>It is a good training for crisis management because it allows you to quickly resolve issues. It teaches you got to quickly resolve issues and also gives you the experience to basically project which things are going to become problems if they’re not dealt with right away. That’s actually a lot of what I do too, is preventing future problems from happening.</p>
+
+<p><strong>Christine:</strong> Cool. It sounds like you’re very busy.</p>
+
+<p><strong>Will:</strong> As we all are.</p>
+
+<p><strong>Christine:</strong> As we all are. That’s a lot of information about how to ship a product.</p>
+
+<p><strong>Will:</strong> Yeah, sorry.</p>
+
+<p><strong>Christine:</strong> No, it’s great! But if you could give one piece of advice to some of our young product creators out there who are maybe very much like Will from several years ago, what would that be?</p>
+
+<p><strong>Will:</strong> The one piece of advice that I would give is to not be intimidated by the concepts and the challenge of manufacturing. Which is to say that I know a lot more than I did three years ago, which is in the context of things still not even that much. But there are very few things in terms of education and an occupation that can prepare you for manufacturing anyways. Even if you know nothing, you’re more or less as prepared as anybody else to just jump into it and learn a lot. Me, for example. I really had no idea what I was doing. As a part of that sentiment, don’t be intimidated by it, not because it’s not scary but because like, hey, that’s the best way to learn. By jumping in.</p>
+
+<p>Also, it means that you don’t necessarily have to hire an expert. It’s good to have informed opinions to help you learn. We have had tons of advisers that are way more experienced than we are who help shape our opinions on things, but you shouldn’t assume that you can’t do something. In fact, you being involved in the manufacturing process as hands-on as possible is the single best way to make sure that the thing you want to build turns out the way that it looks in your head.</p>
+
+<p>For you to be individually involved on the ground, talking with people and helping to make that happen, because just all these little things that can take it off track for good reason or for bad. Being hands-on, involved, and an active participant in your development and manufacturing process is a scary thing, but something that product creators can do and can learn how to do even if it’s not your background.</p>
+
+<p><strong>Christine:</strong> Cool.</p>
+
+<p><strong>Will:</strong> Yeah, that’s my advice.</p>
+
+<p><strong>Christine:</strong> That’s good advice, Will.</p>
+
+<p><strong>Will:</strong> Thanks.</p>
+
+<p><strong>Christine:</strong> I also wanted to talk about the new docs because we released GitHub, and I know that you’re involved in this.</p>
+
+<p><strong>Will:</strong> I was.</p>
+
+<p><strong>Christine:</strong> You were a big part of this whole How To Build A Product section.</p>
+
+<p><strong>Will:</strong> How To Build A Product, right.</p>
+
+<p><strong>Christine:</strong> Yeah. Some people on here have been asking if we can show them how to contribute, not just to the docs, but to other repos for those who are unfamiliar with <a href="http://github.com">GitHub</a>. Will, I know that you use the <a href="https://desktop.github.com">GitHub GUI</a> (Goo-ey).</p>
+
+<p><strong>Will:</strong> Yes, the GUI. A lot of people out there on the Particle team are very good. They’re engineers. They’re very good at active development. They contribute to our repositories many times a day. They’re good at command line things, and their text editors are mostly neon colors and have lots of paints that are separated and don’t have a lot of regular words in them. I don’t consider myself in that category although I am familiar with the command line tool. One thing that has improved my ability and my comfort with contributing to our open source stuff is the GUI because it’s a really good one. We’re going to show you how to use it.</p>
+
+<p><strong>Christine:</strong> Yeah, let me do a screen share here. I think that I have closed all of the things in my screen might be distracting. Let me just close this. iMessages, yeah, I should close that. Quicktime recording.</p>
+
+<p><strong>Will:</strong> All the things you mean.</p>
+
+<p><strong>Christine:</strong> Yeah.</p>
+
+<p><strong>Will:</strong> So, not nothing.</p>
+
+<p><strong>Christine:</strong> I removed some of the things. This is a Quicktime recording of Will and Christine narrating the <a href="https://www.youtube.com/watch?v=-sP5hn6VDgE">Electron video</a> to test the microphone. Close that.</p>
+
+<p><strong>Will:</strong> You guys were not kidding, it gets warm in here.</p>
+
+<p><strong>Christine:</strong> It does. I know, this is a big problem last time. Ok. I can just share the GUI but I am going to share the entire screen.</p>
+
+<p><strong>Will:</strong> I’m worried that this [flowers video] is distracting for people.</p>
+
+<p><strong>Christine:</strong> Yeah. Maybe we should switch to a different interface.</p>
+
+<p><strong>Will:</strong> Let’s switch back to the water.</p>
+
+<p><strong>Christine:</strong> Yeah, let’s go back to the water.</p>
+
+<p><strong>Will:</strong> The water was nice.</p>
+
+<p><strong>Christine:</strong> The water was really great. Here’s GitHub.com.</p>
+
+<p><strong>Will:</strong> Cool, yes.</p>
+
+<p><strong>Christine:</strong> All about GitHub. You can download the GitHub app which I actually already have it. I am not sure how one does that.</p>
+
+<p><strong>Will:</strong> Look at that, the new GitHub desktop is now available.</p>
+
+<p><strong>Christine:</strong> New GitHub, yeah. You click on this if you don’t have it.</p>
+
+<p><strong>Will:</strong> It gives you a bunch of information.</p>
+
+<p><strong>Christine:</strong> It gives you an explanation, yeah.</p>
+
+<p><strong>Will:</strong> We’re also going to give you some information.</p>
+
+<p><strong>Christine:</strong> You can download it here if you want, <a href="https://desktop.github.com">desktop.github.com</a>, cool. The first thing will be a little bit more complex than the second thing. I am going to go over this, which is super easy. This is when you download GitHub desktop. It’s going to actually have a little tutorial that you can walkthrough that’s probably going to tell you exactly how to do what we’re going to show you right now.</p>
+
+<p><strong>Will:</strong> We’re just going to show you the actual repositories that we use for determining the documentation.</p>
+
+<p><strong>Christine:</strong> Yeah. Let’s say that you want to do something with docs. Let’s say what you would actually want to do is first go here, <a href="http://github.com/spark">github.com/spark</a>.</p>
+
+<p><strong>Will:</strong> <a href="http://github.com/spark">github.com/spark</a> which is...</p>
+
+<p><strong>Christine:</strong> It’s still Spark because it will take some more to change everything over to Particle and that’s a pain. We’re waiting until we have a little more latitude to do that. Let’s see. You can see, for example, <a href="http://github.com/spark/firmware">firmware</a>. Somebody asked to go through these repositories. Firmware is obviously for firmware. Other ones that you might want to know about like <a href="http://github.com/spark/docs">docs</a>, which is what we just built for the new documentation. There’s a couple of libraries you might see scattered through here such as <a href="http://github.com/spark/InternetButton">InternetButton</a> and <a href="http://github.com/spark/RelayShield">RelayShield</a> that are actual official Particle libraries for these shields.</p>
+
+<p>There’s also the <a href="http://github.com/spark/electron">Electron</a> which is right now hardware files. Also Particle Dev which is listed currently as <a href="http://github.com/spark/spark-dev">spark-dev</a>. These are all open source. You guys should definitely come in, and play with them, and make pull requests the way that we’re about to show you. There is two sections for iOS and Android. If you search iOS, oops that’s the wrong place. Let’s <a href="https://github.com/spark/?utf8=%E2%9C%93&amp;query=ios">search iOS</a>. You can see we have these three iOS repos, one for set up, one for the SDK, and one for the Tinker app. You can actually create or edit these if you see fit. There’s also one for <a href="https://github.com/spark/?utf8=%E2%9C%93&amp;query=android">Android</a>.</p>
+
+<p><strong>Will:</strong> Wow.</p>
+
+<p><strong>Christine:</strong> Yeah, I know it’s so great. There’s a bunch of them to be aware of. I will do <a href="https://docs.particle.io/guide/getting-started/contributing">a little write up</a>. There’s so many here. There’s the <a href="http://github.com/spark/particle-cli">CLI</a> right here. I’ll do a little write up of stuff that could be helpful to know in terms of places where people can make contributions and I’ll put it on the community. There’s <a href="http://github.com/spark/sparkjs">spark-js</a>, otherwise known as ParticleJS, the JavaScript SDK. This is the <a href="http://github.com/spark/PowerShield">PowerShield</a>, which is one of our internal libraries that we were just talking about. This (<a href="http://github.com/spark/spark-server">spark-server</a>) is the local cloud. People ask about this a lot.</p>
+
+<p><strong>Will:</strong> It is spark-server local cloud.</p>
+
+<p><strong>Christine:</strong> Yeah, spark-server is local cloud.</p>
+
+<p><strong>Will:</strong> Wow.</p>
+
+<p><strong>Christine:</strong> This is the <a href="http://github.com/spark/photon-counter">photon-counter</a> that sits in our office that counts how many Photons have been sold. Hypothetically, you can make a pull request to that if you want.</p>
+
+<p>All right, back to GitHub. I want to edit the docs. I am going to go back over here to the repos. <a href="http://github.com/spark">GitHub.com/spark</a>.</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/pi-docs-1.png"></div>
+
+<p><strong>Christine:</strong> I am going to go to the <a href="github.com/spark/docs">docs</a> because that’s the one that I want to edit.</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/pi-docs-2.png"></div>
+
+<p><strong>Christine:</strong> You can see here, this is just a list of all the files that are here and you can navigate through this. There’s also a section that’s just current pull requests and issues. You’re welcome to create issues if you see something that’s wrong.</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/pi-docs-3.png"></div>
+
+<p><strong>Christine:</strong> You can say “new issue.” Title: This is an issue...</p>
+
+<p><strong>Will:</strong> &quot;...Christine isn’t wearing a hat.&quot;</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/pi-docs-4.png"></div>
+
+<p><strong>Christine:</strong> &quot;Christine is not wearing a hat and that makes me sad.&quot; All right, submit new issue. You can see that this now appears in this listed issues. It has the name of the user which the name of this user is <code>hunterthedog</code>. That is our mascot in the Spark house, Particle house, Particle loft. I don’t know what we call it these days but anyway. Now, you can go back here and you can actually see this issue was created, and it’s sitting here. These issues are looked at and reviewed by people on the Particle team. You’re welcome to do that, and go back to docs.</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/pi-docs-5.png"></div>
+
+<p><strong>Christine:</strong> Now, I am going to say that I want to fork this guy. This will actually create a copy of the entire docs repo in my GitHub accounts and I can see there’s now a fork for hunterthedog in docs living in hunterthedog’s GitHub. I think actually if I click on this, I can see where all the forks are, right? Yeah. You can see I have fork of docs here. I also forked firmware earlier as a test. I can show you guys that later. Here, I have forked the docs.</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/pi-docs-6.png"></div>
+
+<p><strong>Christine:</strong> Now, I can say clone in desktop. It’s going to say, “Hey, you want to open your GitHub on desktop?” and I say, “Yeah, I’d love that.”</p>
+
+<p><strong>Will:</strong> Launch that.</p>
+
+<p><strong>Christine:</strong> Now, I can save this. I created a little folder called git-test so I can clone the docs into there.</p>
+
+<p><strong>Will:</strong> Nice.</p>
+
+<p><strong>Christine:</strong> Cool. Now, it’s going to do that and it’s going to take a little while to clone it. While we’re doing that, I am going to switch it back to... I was going to switch it back to the regular camera, and we can talk about other things.</p>
+
+<p><strong>Will:</strong> Nice.</p>
+
+<p><strong>Christine:</strong> We can go back and check on it.</p>
+
+<p><strong>Will:</strong> Part A and part B.</p>
+
+<p><strong>Christine:</strong> What I should actually instead, hold on, back to screen share. What I am going to do instead is I am going to show you how to do this process super, super fast. Let’s say that I just wanted to make an edit and I don’t really care about forking this or anything like that. Then, I am just going to go to Spark. I am going to say, this thing in the docs, I really want the page on... I am navigating here which is probably going to be confusing for people. Just go to the docs, docs.particle.io. Let’s load that. Let’s wait for that to load. Here it is.</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/pi-docs-7.png"></div>
+
+<p><strong>Christine:</strong> Let’s say, in Getting Started, I really don’t like this exclamation point. It scares me so I am going to edit and wow, it’s going to just automatically open this.</p>
+
+<p><strong>Will:</strong> Wow.</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/pi-docs-8.png"></div>
+
+<p><strong>Christine:</strong> Now, I can actually just do an edit in my own fork of this project. It will create a fork as well if I don’t have one. Now, I can go down and say, “Hey, here’s this caption here. It’s the exclamation point I don’t like.” Now, I can put a period instead of an exclamation point.</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/pi-docs-9.png"></div>
+
+<p><strong>Will:</strong> Yeah, it’s better.</p>
+
+<p><strong>Christine:</strong> Yeah. Then, I should definitely say what I did because otherwise, the people at Particle would be like, “What did you do?” I don’t want to use that so I can say, “Removed exclamation point. That exclamation point is too enthusiastic. Also this is a test PR and do not have to merge it.” Propose file change.</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/pi-docs-10.png"></div>
+
+<p><strong>Will:</strong> Boom.</p>
+
+<p><strong>Christine:</strong> Look.</p>
+
+<p><strong>Will:</strong> Wow.</p>
+
+<p><strong>Christine:</strong> Now, that’s automatically going to propose that file change.</p>
+
+<p><strong>Will:</strong> That is cool.</p>
+
+<p><strong>Christine:</strong> Yeah. I can actually create this as a pull request also.</p>
+
+<p><strong>Will:</strong> Nice.</p>
+
+<p><strong>Christine:</strong> Yeah.</p>
+
+<p><strong>Will:</strong> Pull request, Christine. Now, what is that?</p>
+
+<p><strong>Christine:</strong> A pull request allows us at Particle to review all of the changes that you’ve made. It’s like you can comparing your fork with our actual docs repo. Then, we can look and say, “Yeah, you would like to put this as the real changes now. Let us go through that and see if that’s a good idea.” Then, we can comment on your pull request if you want.</p>
+
+<p><strong>Will:</strong> We can talk about it.</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/pi-docs-12.png"></div>
+
+<p><strong>Christine:</strong> We can talk about it. You can leave a comment saying...</p>
+
+<p><strong>Will:</strong> Wow, that is great.</p>
+
+<p><strong>Christine:</strong> “Hey, I like puppies.” Really, you shouldn’t comment random things. You should probably comment things that are relevant to your pull request.</p>
+
+<p><strong>Will:</strong> Yeah, there it is.</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/pi-docs-11.png"></div>
+
+<p><strong>Christine:</strong> There it is. All right, let’s go back to the GitHub app and see if that [repo cloning from earlier] is done.</p>
+
+<p><strong>Will:</strong> It’s working.</p>
+
+<p><strong>Christine:</strong> Cool. You can see that this has now been added to your little space on GitHub, and this is hunterthedog’s...</p>
+
+<p><strong>Will:</strong> Fork.</p>
+
+<p><strong>Christine:</strong> Fork, yeah. Where did I put this? Let’s actually go. Under git-test, I have this little folder.</p>
+
+<p><strong>Will:</strong> You’re going actually, to be clear, to a folder on your computer where that fork was downloaded to your computer.</p>
+
+<p><strong>Christine:</strong> Yeah.</p>
+
+<p><strong>Will:</strong> This is a folder on your computer.</p>
+
+<p><strong>Christine:</strong> You’ve chosen where to put it. I chose to put it in git-test in my home folder but you could really put it anywhere.</p>
+
+<p><strong>Will:</strong> Nice.</p>
+
+<p><strong>Christine:</strong> You could put it on the desktop, you could put it in your bin, you could put it wherever you want to. You could imagine that this is especially useful for things like firmware or stuff where you might actually want to play with, test, and make it your own, and then push all your changes back to the master branch. Let’s make that same change here. We’ll make the exact same change. That’s going to be in content: src &gt; content &gt; guide &gt; getting-started &gt; start.md</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/pi-docs-13.png"></div>
+
+<p><strong>Christine:</strong> Here, we’re going to open this guy. It’s going to open in my text editor. I highly suggest using a text editor like <a href="http://www.sublimetext.com/">Sublime</a> or <a href="https://macromates.com/">TextMate</a>.</p>
+
+<p><strong>Will:</strong> Or <a href="https://atom.io/">Atom</a>.</p>
+
+<p><strong>Christine:</strong> Or Atom, yeah.</p>
+
+<p><strong>Will:</strong> That is what I use.</p>
+
+<p><strong>Christine:</strong> You can see here, here is the same exclamation point. Let’s change that to a period. Here’s the GitHub before.</p>
+
+<p><strong>Will:</strong> Save that.</p>
+
+<p><strong>Christine:</strong> I am going to save.</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/pi-docs-14.png"></div>
+
+<p><strong>Will:</strong> Boom, and now it’s like, “Hey.”</p>
+
+<p><strong>Christine:</strong> Doesn’t know?</p>
+
+<p><strong>Will:</strong> Second one.</p>
+
+<p><strong>Christine:</strong> Look.</p>
+
+<p><strong>Will:</strong> You check out that little period.</p>
+
+<p><strong>Christine:</strong> See, it knows. Now, this is great because it will actually show you the difference between before and after. I can say...</p>
+
+<p><strong>Will:</strong> The same summary in here.</p>
+
+<p><strong>Christine:</strong> Yeah, took out the...</p>
+
+<p><strong>Will:</strong> Exclamation point.</p>
+
+<p><strong>Christine:</strong> Exclamation point.</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/pi-docs-15.png"></div>
+
+<p><strong>Christine:</strong> Then, I can commit this to master. And keep in mind that because this is a fork, you can see it’s in hunterthedog/docs. It’s going to be committed to master within my version.</p>
+
+<p><strong>Will:</strong> The fork, right.</p>
+
+<p><strong>Christine:</strong> Not within Particle’s master.</p>
+
+<p><strong>Will:</strong> Not within Particle’s master.</p>
+
+<p><strong>Will:</strong> Then, when you do that...</p>
+
+<p><strong>Christine:</strong> Right. Now, this has been added there.</p>
+
+<p><strong>Will:</strong> Boom.</p>
+
+<p><strong>Christine:</strong> I can say pull request.</p>
+
+<p><strong>Will:</strong> Hey, I want to pull request.</p>
+
+<p><strong>Will:</strong> Hopefully, that ends up working.</p>
+
+<p><strong>Christine:</strong> Yeah. Hypothetically that should work.</p>
+
+<p><strong>Will:</strong> Usually, what you’re going to see is basically the description of changes between our version, our master version and your fork of that repository. Then, you can submit your pull request through the desktop application here.</p>
+
+<p><strong>Christine:</strong> Yeah. Anyway, that should be how it works. Also, if you follow this little tutorial, they’ll tell you how to do the exact same thing. It’s really super nice. This is just doing it for our stack specifically. In any case, here we go.</p>
+
+<p><strong>Will:</strong> Yeah. Now, we’ll be able to do it. There it is.</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/pi-docs-16.png"></div>
+
+<p><strong>Christine:</strong> Look at that. Now, I can say, send pull request.</p>
+
+<p><strong>Will:</strong> You get a nice little illustration at the top of the page about when you forked it and how many commits there had been to the master branch, the Particle master branch before you try to remerge it.</p>
+
+<p><strong>Christine:</strong> This is the Particle version of it. Then, we forked it here. Now, this was ours. Then, we made this commit. Now, we merge it back in. This is a dotted line because it hasn’t happened yet.</p>
+
+<p><strong>Will:</strong> It hasn’t been approved yet. Moral of the story, you don’t have to be a command line master or a program wizard to participate in the open source community. How about that?</p>
+
+<p><strong>Christine:</strong> That’s pretty exciting, Will.</p>
+
+<p><strong>Will:</strong> That’s pretty neat. Thanks to the nice folks at GitHub...</p>
+
+<p><strong>Christine:</strong> At GitHub.</p>
+
+<p><strong>Will:</strong> ...for doing great work.</p>
+
+<p><strong>Christine:</strong> All right, cool.</p>
+
+<p><strong>Will:</strong> Wow.</p>
+
+<p><strong>Christine:</strong> Now, that’s really exciting there.</p>
+
+<p><strong>Christine:</strong> Yeah.</p>
+
+<p><strong>Will:</strong> It was nice.</p>
+
+<p><strong>Christine:</strong> Now, we’re at about 4:30, and this is usually the time of the interview where I like to take questions from everybody out there in the audience. Let’s see if anybody has written anything. Let’s see. Alex Swan is here. He’s a cool person. He did the hamster thing, the hamster fitness tracker.</p>
+
+<p><strong>Will:</strong> Yeah.</p>
+
+<p><strong>Christine:</strong> Yeah, it was so exciting. Dr. Zachary Crockett is here. California State flower, just showing on the screen there for a moment.</p>
+
+<p><strong>Will:</strong> Wow.</p>
+
+<p><strong>Christine:</strong> That’s cool.</p>
+
+<p><strong>Will:</strong> It is nice.</p>
+
+<p><strong>Christine:</strong> Okay. Alex had a question about WarSting. Can we get it updated to work with the Photon? The Wi-Fi scan library is not currently functional. As an alternative, the suggested/hinted Wi-Fi scan function would also be great.</p>
+
+<p><strong>Will:</strong> That is a great suggestion, Alex. And—oh. That is exactly what Zachary Crockett, our CTO, said. I agree that that is a great suggestion. Sure, why not.</p>
+
+<p><strong>Christine:</strong> I think that sounds great.</p>
+
+<p><strong>Will:</strong> I think that sounds great.</p>
+
+<p><strong>Christine:</strong> This is actually a great question for Will too because Will did the WarSting video.</p>
+
+<p><strong>Will:</strong> Yeah. I did. I did. Yes, I’m not exactly sure what the current status of incompatibility is, so we’ll look into it. We will, yeah.</p>
+
+<p><strong>Christine:</strong> Yeah, that sounds great.</p>
+
+<p><strong>Will:</strong> Great suggestion, Alex.</p>
+
+<p><strong>Christine:</strong> Let’s see what else. Yes, I can wait for my questions. In the meantime, know any good jokes, Will?</p>
+
+<p><strong>Will:</strong> Oh my, gosh. I was just talking about how I’m the kind of person who doesn’t have a bunch of jokes, just like sitting around. Man, I know you do.</p>
+
+<p><strong>Christine:</strong> I have some jokes.</p>
+
+<p><strong>Will:</strong> You have lots of jokes.</p>
+
+<p><strong>Christine:</strong> I have lots of jokes.</p>
+
+<p><strong>Will:</strong> I just don’t have jokes.</p>
+
+<p><strong>Christine:</strong> I have a joke about-- Why did the scarecrow get promoted?</p>
+
+<p><strong>Will:</strong> Why did the scarecrow get promoted?</p>
+
+<p><strong>Christine:</strong> Because he was out standing in his field. I kinda like it.</p>
+
+<p><strong>Will:</strong> That’s a really good joke.</p>
+
+<p><strong>Christine:</strong> I think it’s funny.</p>
+
+<p><strong>Will:</strong> That’s a tremendous joke. Wow.</p>
+
+<p><strong>Christine:</strong> Do we still have any buttons here. I was going to ask you to talk about the packaging.</p>
+
+<p><strong>Will:</strong> Sure. I’m sure we have one.</p>
+
+<p><strong>Christine:</strong> Let me get it there over there. I’ll be right back.</p>
+
+<p><strong>Will:</strong> I’ll just hold down the fort.</p>
+
+<p><strong>Christine:</strong> You should hold down the fort.</p>
+
+<p><strong>Will:</strong> See if I can find any...</p>
+
+<p><strong>Christine:</strong> There’s so many things in the closet.</p>
+
+<p><strong>Will:</strong> See if I can find any additional comments. I’ll field this one just while we’re waiting for buttons to be found which is...</p>
+
+<p><strong>Christine:</strong> I found the thing that it used to live in.</p>
+
+<p><strong>Will:</strong> Maybe they’re all gone. There should be one out in the main office.</p>
+
+<p><strong>Christine:</strong> I think I actually have one that I took for like dev purposes, something like that.</p>
+
+<p><strong>Will:</strong> “Dev purposes.”</p>
+
+<p><strong>Christine:</strong> Yeah. I think it’s a really cool thing with it. I built the doorbell. I used the Internet Button to make a doorbell where, depending on when somebody is coming home and how far away they are, it will play a theme song personalized for them. Let’s say that you are ten minutes away. Then, maybe it will play like one snippet of a song. As you’re five minutes away, it’s longer. Then, it plays the whole thing as you walk in the door.</p>
+
+<p><strong>Will:</strong> That’s awesome.</p>
+
+<p><strong>Christine:</strong> Then, your theme song is playing when you walk in.</p>
+
+<p><strong>Will:</strong> Wow. I didn’t even know you made that.</p>
+
+<p><strong>Christine:</strong> I did. It was really exciting. I was actually going to make it happen for the Particle house. Good, more questions. What are the big hurdles for going from prototype to production, and how does Particle help?</p>
+
+<p><strong>Will:</strong> We talk about all this all the time which is that if there are 500 hurdles from going from prototype to production when you’re building a connected product. We try to help you solve as many as we possibly can. Right now, maybe that’s only 80 of the 500. Next year, hopefully, it’s 180 of the 500. But the things that we’re doing right now to try to help-- first of all, the infrastructure side, we’re trying to provide people with tools that you don’t have to start over with when you’re trying to go from that prototype to product. That’s one thing: providing tools that are continuously useful throughout that whole process.</p>
+
+<p>With the dev kits, we picked parts that you can actually get at scale. We pick parts that are low cost, that are really effective. With the modules, we provided radios so that the P0 and the P1-- modules are on the Photon-- we provided modules that you can actually buy at medium volumes, so that you don’t have to talk to some really, really large silicon provider or module manufacturer, and have to try to get special pricing, and you’re on delivery terms. We have them on stock, we can just sell them to you.</p>
+
+<p>The biggest thing that we always try to do is with education. And that’s part of the reason why we built the guide, the <a href="https://docs.particle.io/guide/how-to-build-a-product/intro/">How to Build the Product with Particle guide</a>. It’s to just help educate people on the kinds of problems that we run into and the kinds of things that will make your life so much easier down the road if you’re a product creator. For us, the thing that helps in preparation for manufacturing, as I said, is just having people as resources that we can talk to and ask for advice. That is a role that we will play with anybody, frankly-- is drawing on our experience that we gained over the last couple of years to just provide helpful advice about common problems because, again, until you jump in, you really don’t know what you’re up against.</p>
+
+<p>The short answer to the question is that we try to help in any way we can and there are a lot of different kinds of challenges, and so it means helping out in a lot of different ways.</p>
+
+<p><strong>Christine:</strong> Let’s see, what else do we have? This is a question from Stephanie Rich. If you could go back to young Will right before he got on the plane to meet these guys in China, what would you tell him?</p>
+
+<p><strong>Will:</strong> I ended up getting there but definitely to just embrace the craziness of everything, a lot of different kinds of craziness. There’ the craziness of working on a startup where your plans change all the time. The craziness of living in a foreign country where you don’t speak the language and have to learn it. The craziness of just the world of manufacturing where everything goes wrong and the best case scenario is expectations are met. To be comfortable with that and to not let it stress you out.</p>
+
+<p>I am the team worrier. Everything always makes fun of me because I have no nails left and I am always the one stressing about things and making plans just so that I feel better, not necessarily because anybody else needs them. Believe it or not, I have really worried less over the last few years rather than more, and I think a lot of that has to do with just embracing the craziness of things and becoming more comfortable not having the answer to every problem. I would give that advice to myself-- just to remember that it’s okay if things are stressful. It just means you’re probably learning new things.</p>
+
+<p><strong>Christine:</strong> Yeah, that makes sense. Let’s see. We have a question from Alex Kushner. Can you talk a bit about how you guys coordinate supply chain challenges with the customers that are shipping products based on the Core, e.g. Luna, Cleverpet, etc.?</p>
+
+<p><strong>Will:</strong> Sure. That’s a really good question. I think it’s something that we are trying to improve as we become a more mature company. Correct me if I’m wrong, but it sounds like the crux of the question is-- you run into problems sometimes, and there are people who depend on you to build products. So how do you go about coordinating or working together with customers who are shipping products with our technology inside of it to make sure that our problems don’t become their problems?</p>
+
+<p>It’s something that we’re getting better at. Communication is the most important thing, and that’s internal and external communication. Internally, we need to make sure that everybody has the most recent updates about manufacturing, about what’s going on, the challenges we’re running into. Externally, with our customers, it means setting expectations and hopefully consistently exceeding those expectations instead of consistently disappointing them.</p>
+
+<p>I think that that’s something that we can continue to get better at as a company-- continually striving towards transparency is important, but also continually striving towards consistency and making sure that the things that we’re communicating are aligned, and that there are very clear expectations set up at the beginning of a relationship with the customer who is a building a product with our technology. The things that we promised to do for them and the things that we will do in a situation where things don’t go as planned, the things that we will do for them to make it right. I think that’s something that is really, really important to us-- customer happiness and making sure we’re doing everything that we can to support people who are building products with our stuff.</p>
+
+<p><strong>Christine:</strong> That’s a good answer Will.</p>
+
+<p><strong>Will:</strong> Thank you.</p>
+
+<p><strong>Christine:</strong> Alex has noted: “Particles IRC was dead last time I hopped in. Maybe a public slack channel would help the Particle dev community to communicate.” Alex Swan, I am so glad you brought that up because I’ve been thinking the exact same thing. Keep an eye on the community in, I would say, the next week or two. I’m going to try and do a thing. We’ll see. What else? Garrett Bartley, one of our wonderful Elites, is asking, “How did you get into Particle (formerly Spark)?”</p>
+
+<p><strong>Will:</strong> This is a funny story actually. To me. I hope it’s funny to you also. I was at graduate school, and I was looking for a job. I thought I wanted to be a design engineer. I thought I wanted to sit behind the Solidworks desk and just do that all day because that was really cool. But it turns out that in order to apply for a design job, you need a design portfolio, and my first question was, “What’s that?” It turns out, a design portfolio is basically like a nice little presentation of all the stuff you’ve worked on, design stuff you worked on. I didn’t have that because nobody at my school told me I needed that to do that job.</p>
+
+<p>I was taking the summer to build it so that I could apply to these jobs. In a moment when I was not working on my portfolio, I was on Facebook and-- I knew Zach previously because we were both in the same singing group in college funnily enough. He posted about the Kickstarter campaign for the Socket which I saw because it showed up on my newsfeed because we were friends. I went and checked it out, and thought it was really cool. Then, at the bottom, I still remember this, it said, “If you’re interested in joining our team, just send us an email” or something like that. “We’re always looking to grow out team. If you’re interested in Spark, send us an email.”</p>
+
+<p>I was like, “I will.” I was like, “I got all these job applications out. One of them is going to work out, but I might as well just send another one.” I was looking for jobs. I started doing some modeling stuff for the Socket which of course never existed beyond the Kickstarter that we did for it.</p>
+
+<p><strong>Christine:</strong> <a href="https://www.kickstarter.com/projects/sparkdevices/spark-upgrade-your-lights-with-wi-fi-and-apps/">The Socket</a> was the original idea for Spark as a product. It was what we now call the Spark Socket, which is a connected lighting system: a light socket that you would screw in, and then screw the light bulb into that, and then it would allow you to control your lights from anywhere and also preprogram them. Eventually, the early Particlites realized that it was going to be a cool thing to just sell the thing that they are making to power this rather than the lighting system itself. Anyway, that’s the background on that.</p>
+
+<p><strong>Will:</strong> I emailed Zach and was getting involved a little bit with the mechanical side of the socket. Then, they got accepted into the HAX, into the incubator program and he was basically like, “Hey, you want to come?” I was like, “Sure. Why not? This will be weird, and fun, and crazy but why not.”</p>
+
+<p>I still remember showing up at the airport meeting with Zachary and Zach. Then, even in the first couple of days leading up to it thinking, “We’ll see how this goes. Then, afterwards I can make a decision of whether I want to do this.” Honestly, within a week of being there, I felt like I was a part of the team and I stopped saying things like, “What are you guys planning for the Socket after this?” and started saying things like, “What are we going to do after?” It happened really quickly. That’s how I joined the team because I was an intern at that time. After that, I got a job offer. Yay!</p>
+
+<p><strong>Christine:</strong> Yay!</p>
+
+<p><strong>Will:</strong> Yeah. I’ve just been doing that ever since.</p>
+
+<p><strong>Christine:</strong> Cool.</p>
+
+<p><strong>Will:</strong> Yeah.</p>
+
+<p><strong>Christine:</strong> Let’s see, we have a question from Carston Dressler which is, “How did you get started with hardware?”</p>
+
+<p><strong>Will:</strong> I was a mechanical engineer when I was in school and had taken one analog electronics class. That is it. That is how I got started, by being really bad at electronics. When we were in China, I learned how to do electronics assembly and I was an intern. I was like the assembly monkey. Actually, Zach put together a ton of boards himself as well.</p>
+
+<p><strong>Christine:</strong> What is Zach’s claimed record on Spark Cores?</p>
+
+<p><strong>Will:</strong> I don’t even know if we should talk about it here. I don’t want to publicize it. But I think his claimed record is, I can’t remember, what was it? I think he said like a 100. No, no, no.</p>
+
+<p><strong>Christine:</strong> It was a large number in a small period of time.</p>
+
+<p><strong>Will:</strong> It’s something like 50 Cores in a day. Which, you know, it’s a long time since we’ve done that assembly work and it sounds like a lot to me, but who am I to judge? [Laughs] Anyway, the long story short is that the way I got started with hardware was just by getting thrown into it and having no idea what I was doing, and it started with just electronics assembly. Then, I got involved into the generation of the parts. So, bills of materials, ordering things so that I could assemble them and getting the PCBs ordered.</p>
+
+<p>Then, I became more familiar with Gerber files and how to make them in Eagle. Then, all of a sudden, I was in Eagle. I started poking around in the schematics and understanding the relationship between the board file and the schematics. Then, I took a first pass at the shields for the Core which, if you are at the Kickstarter campaign, they turned out great. So, I am glad that that wasn’t my permanent role. But then, I got into a little bit of PCB design.</p>
+
+<p>Then, just being hands-on and just having to deal with functional obstacles that are actually in your way. It’s such a good way to learn things. My entire hardware training has been on the job, outside of a textbook, just trying to figure it out so that we could not catch somebody’s house on fire when we were doing the Socket. That was all high voltage stuff. That was crazy. I electrocuted myself twice. Once prototyping with the Socket stuff and once unplugging a rice cooker in my apartment.</p>
+
+<p><strong>Christine:</strong> That second one didn’t actually have anything to do with manufacturing?</p>
+
+<p><strong>Will:</strong> Not at all. What I learned is that the center pole, the ground pole on US sockets, is longer than the other two so that it stays grounded for a longer period of time as you withdraw it from the electrical socket. But in China, they’re all the same length. And so if they’re really in there-- I just had grabbed it and was pulling it out, and made contact with the metal prongs as they were still partially in the electrical socket, and it gave me a nice little zap but here I am, still alive today.</p>
+
+<p><strong>Christine:</strong> I’m glad that there was no permanent damage from that. That we know of.</p>
+
+<p><strong>Will:</strong> Yeah, nobody can tell. Yeah, we know. Oh man.</p>
+
+<p><strong>Christine:</strong> Let’s see if there are any other questions.</p>
+
+<p><strong>Will:</strong> If there’s none, I can always talk about some of the funny things that happened during production of the Photon because, of course, there are some issues that people are aware of, and then there are other issues that just got fixed very quickly before we shipped. People would have no idea that they existed, and it helps to describe all the funny little things that happened during manufacturing.</p>
+
+<p><strong>Christine:</strong> I think that would be a great idea.</p>
+
+<p><strong>Will:</strong> One of the funny ones is-- depending on which batch of the hardware you got, you either had a unique tractable barcode or you didn’t. You would know if you didn’t because there’s a little square for where it goes and it says something along the lines of, “If you can read this and somebody forgot the barcode sticker.” Which is by intention. But the first few shipped that didn’t have our tracking infrastructure set up but the ones afterwards do.</p>
+
+<p>They have these little stickers that are unique for every single Photon that we send out and they are printed with a thermal printer. These are inkless printers that basically use heat to expose test on a little sticker page. Then, we used those, put it on a box, and boom. We can print out a unique sticker for each one. We also heat shrink them. We take a little plastic wrapping, and fold it up. Then, we use heat to seal it into the little gum stick plastic wrapping.</p>
+
+<p>One thing that happened that we didn’t anticipate-- this is just another example of this kind of stuff-- is that the sticker was a little long. It wrapped around the edge of the box. That also helped keep it closed during handling, which is good. But when you heat shrink them, again these stickers use heat to expose the test. All the first units we put out, when you heat shrink them, the ends of the matchbox packaging, the stickers turned black because, of course, they were being exposed by the heat used to seal the plastic wrapping on the outside of the matchbox.</p>
+
+<p>Then, all of a sudden, every single sticker that we put on the boxes were all coming out black under plastic wrapping and just, a lot of crap. We still have to re-source stickers that are of different size, but we ended up having to trim them off so that they wouldn’t get blackened during production, but we could still actually take advantage of the tracking work that we put in for each individual unit. Stuff like that, guys. Just, you can never expect it.</p>
+
+<p><strong>Christine:</strong> Yeah. It’s a good story, man.</p>
+
+<p><strong>Will:</strong> Thanks.</p>
+
+<p><strong>Christine:</strong> Yeah.</p>
+
+<p><strong>Will:</strong> Christine.</p>
+
+<p><strong>Christine:</strong> [Laughs.] We have a couple of other questions. Let’s see. “What is the craziest developer project you’ve seen?”</p>
+
+<p><strong>Will:</strong> Oh man. Craziest.</p>
+
+<p><strong>Christine:</strong> The follow-up question is, “Are there any Particle-enabled products we should be looking out for or that you’d like to see?”</p>
+
+<p><strong>Will:</strong> You’d like to see.</p>
+
+<p><strong>Christine:</strong> Yeah.</p>
+
+<p><strong>Will:</strong> Yes.</p>
+
+<p><strong>Christine:</strong> Let’s start with the ones that you’ve seen.</p>
+
+<p><strong>Will:</strong> Okay.</p>
+
+<p><strong>Christine:</strong> Okay.</p>
+
+<p><strong>Will:</strong> Craziest, man. There are sort of two kinds of crazy. There is the crazy which is crazy impressive and then, there’s the crazy which is like this is silly but awesome. Still to this day, one of my favorites is the <a href="https://www.hackster.io/neo-phreak-3/warkitteh">WarKitteh</a>, the open Wi-Fi network collector. Very similar in fact to WarSting but really, really clever. I also really, just for nostalgic purposes because I worked a lot with him-- we had an intern a couple of years ago who made a project called the <a href="https://www.hackster.io/maxeust/the-foo-bar">foobar</a>, which is an automatic cocktail maker. You had a little web app, you slide or direct the proportions of the different mixers and drinks that you want. Then, press go, and it would use all these pair of salted pumps to pull everything into your cup, and mix up, and everything. Those are some of my favorites.</p>
+
+<p><strong>Christine:</strong> It is called the foobar which is the best.</p>
+
+<p><strong>Will:</strong> It’s called the foobar which is hilarious, yeah.</p>
+
+<p><strong>Christine:</strong> Yeah. This is a question both from Moors7 and ScruffR, the Elites. Are there any Particle-enabled products we should be looking out for or that you’d like to see?</p>
+
+<p><strong>Will:</strong> The ones that are coming up in the pipeline are either very visible and on Kickstarter...</p>
+
+<p><strong>Christine:</strong> Yeah, and on <a href="http://particle.io">our website</a>.</p>
+
+<p><strong>Will:</strong> On our website, yeah. Or they are top-secret under NDA and we can’t talk about it. As far as ones that are coming up in the pipeline, they’re pretty visible.</p>
+
+<p><strong>Christine:</strong> Let’s go there.</p>
+
+<p><strong>Will:</strong> Yeah, let’s go there.</p>
+
+<p><strong>Christine:</strong> Let’s go to our website. I like our website. I was excited when we did our website. I thought it was a big improvement. Now, people can tell what it is that we do.</p>
+
+<p><strong>Will:</strong> Wow, we have mobile with that?</p>
+
+<p><strong>Christine:</strong> Do you know that now—Ah yeah, “Go Mobile With 3G.” Anyway, let’s go down there. Let’s go all the way down to the bottom. Here we have listed Luna, the smart mattress.</p>
+
+<p><strong>Will:</strong> One interesting thing about Wake which is the Dawn of Bedroom Robotics, Wakē.</p>
+
+<p><strong>Christine:</strong> Is it Wake or is it <a href="https://www.kickstarter.com/projects/58395680/wake-welcome-to-the-dawn-of-bedroom-robotics">Wak<font face="helvetica">&emacr;</font></a>? I thought it was Wakē.</p>
+
+<p><strong>Will:</strong> I don’t know. It just spelled like Wake.</p>
+
+<p><strong>Christine:</strong> Let’s click to that. It has a thing over it so it is Wak<font face="helvetica">&emacr;</font>.</p>
+
+<p><strong>Will:</strong> It has a thing over it so it’s Wak<font face="helvetica">&emacr;</font>. Anyway, but my freshman year college engineering project was that exact thing. It was a directional speaker that could wake you up if you have a roommate. I am really glad to see somebody actually making that because that was exactly what we did, and it used a parabolic reflector to concentrate the sound and it was really, really cool. It’s always nice to see something that you thought of being executed on in an effective and good way because then, you can get behind them and be like, “Yeah, I agree. That should exist. Nice. Good work.” I think that’s really cool.</p>
+
+<p>As far as products that don’t exist that I would like to exist, I think-- Put it this way, the hack that I want to do right now is a little vibration sensor that sends me a text message when my laundry is done, because I forget every single time I do it. I don’t hear the little buzz and then, my wash just ends up sitting overnight.</p>
+
+<p><strong>Christine:</strong> You should do that with the button. You can do that with the <a href="https://docs.particle.io/guide/getting-started/button/photon/">Internet Button</a>.</p>
+
+<p><strong>Will:</strong> Yeah, I can do that with the Internet Button so easily. I don’t know. I think there’s something there. I bet you can sell internet-connected washing machines in public places too where you just have it send you a text message or something when your wash is done but you can also see how many minutes are left just like sitting there watching a movie or whatever they do.</p>
+
+<p><strong>Christine:</strong> I don’t know what this magical laundromat/movie theater is that you go to.</p>
+
+<p><strong>Will:</strong> No, no, no, no. People bring their laptop. That’s like the classic thing, right? People bring their laptop, and just sit around, and watch a movie while their laundry is being done but instead...</p>
+
+<p><strong>Christine:</strong> Instead.</p>
+
+<p><strong>Will:</strong> you could... I don’t know, there is something there.</p>
+
+<p><strong>Christine:</strong> You could. The other thing that you could do is-- There’s a little LED that goes off usually on washing machines when your laundry is done, you could just get photons and photoresistor from the Photon Kit, and put the photoresistor in like a suction cup or something and be like, [sticking-suction-cup-to-LED noise].</p>
+
+<p><strong>Will:</strong> Yeah.</p>
+
+<p><strong>Christine:</strong> Then, it will just tell you when the light is on, and you can have it text you through <a href="https://ifttt.com/particle">IFTTT</a>.</p>
+
+<p><strong>Will:</strong> That’s good, through IFTTT.</p>
+
+<p><strong>Christine:</strong> Maybe we should do that. Actually, that sounds like pretty easy.</p>
+
+<p><strong>Will:</strong> We can do right after this.</p>
+
+<p><strong>Christine:</strong> All right, cool. Let’s see what else. Look, other people have had the laundry machine idea as well.</p>
+
+<p><strong>Will:</strong> That’s nice. Good question.</p>
+
+<p><strong>Christine:</strong> Hardware-wise, how is the Amazon dash button different from the Photon?</p>
+
+<p><strong>Will:</strong> Good question. It is very similar. The biggest similarity is that it uses the same Wi-Fi module. It’s got the same Broadcom radio and the same family of microcontroller as the Photon. In a lot of ways, it’s very, very similar. It like the simplest use case for a photon which is, I have a button. When I press the button, detect that, and then make a web request so that we order something.</p>
+
+<p>Interestingly enough, there are bunch of people who have hacked these little buttons. Among them, members of the Particle family. And we are racing to try to get one onto the cloud. It has been a side project for a couple of the engineers here, but I know we’re close. I think we got the bootloader on it and now, we just have to provision it and get it on to the cloud. But we are recognizing those similarities because again, they are super similar... Yeah, just without a button and an LED thing mostly.</p>
+
+<p><strong>Christine:</strong> Let’s see. “How much would you pay for that washing machine idea?”</p>
+
+<p><strong>Will:</strong> Are you going to mail it to me? Is it like... Are you doing this?</p>
+
+<p><strong>Christine:</strong> Garett has a lot of magical projects. I wouldn’t be surprised if he already has it done.</p>
+
+<p><strong>Will:</strong> I think I would want to invest it myself rather than invest in somebody else’s work. Really invest in my own future and my own knowledge and because that’s priceless I think. I will not pay you, Garett. I will not pay you for that idea.</p>
+
+<p><strong>Christine:</strong> That’s it. It’s wrapping up.</p>
+
+<p><strong>Will:</strong> Yeah. It’s wrapping up. It’s sad to see it go, but here we are.</p>
+
+<p><strong>Christine:</strong> Any closing thoughts, Will?</p>
+
+<p><strong>Will:</strong> Closing thoughts? Sure, one closing thought, for the nine of you watching out there, but most importantly for anybody in our community who hops on upon this-- a big thank you from everybody at Particle, but also for myself specifically as the Head of Manufacturing, with the patience that everybody’s had with the Photon. Things certainly did not go smoothly as they could have. Believe it or not, it went more smoothly than the Core. There were just few of you out there to notice when we made mistakes. Mostly, just thank you for being patient and understanding.</p>
+
+<p>As we mentioned at the beginning of this segment, we are always improving and always figuring out how to do a very hard job better. I personally, am very, very excited for the development effort of the Electron. It’s going well. I think we’ve learned from a lot of the challenges we ran into with the last two projects and I think this one will be really, really excellent. Most importantly, things are moving on schedule as of now.</p>
+
+<p>Again, we really hope that you enjoy using the Photon. It’s certainly built by a lot of people who have a lot of love for this space and making things, and for all of you guys, frankly. We will always strive to do our best to live up to the highest standards that we have for ourselves and that you guys have for us. Thanks again and we appreciate it. Thanks for watching.</p>
+
+<p><strong>Christine:</strong> Cool. All right guys, I’m going to sign off now but we’ll see you next time.</p>
+
+<p><strong>Will:</strong> Bye.</p>
+
+            
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="Particle Interactions: Sprint 41 with William Hart (Transcript)" data-related="particle">Tweet</a>
+    </div>
+    
+    
+    <div>
+        <div class="fb-like" data-width="150" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    </div>
+    
+    
+    
+    
+    <div>
+        <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+    </div>
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               <img src="http://spark.github.io/staging-blog/images/christine.jpg">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/christinesunu" title="" target="_blank">Christine Sunu</a></strong><br>
+                <span class="muted">Community Engagement Manager</span>
+                </p>
+            </address>
+
+        </footer>
+
+        
+    </div>
+</article>
+
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2016
+
+        <nav>
+            <a href="https://www.particle.io/">Particle</a> &middot;
+            <a href="http://spark.github.io/staging-blog">Blog</a> &middot;
+            <a href="https://store.particle.io/">Product</a> &middot; 
+            
+        </nav>
+
+        <nav class="social">
+            
+            <a href="https://twitter.com/particle" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/sparkdevices" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+            
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://spark.github.io/staging-blog/assets/appear.js"></script>
+<script src="http://spark.github.io/staging-blog/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=253595308025739";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+    (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = '//hnbutton.appspot.com/static/hn.min.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-37038200-4', 'http://spark.github.io/staging-blog');
+  ga('send', 'pageview');
+</script>
+<script type="text/javascript" src="https://s3.amazonaws.com/redirect.particle.io/redirect-banner.js"></script>
+</body>
+</html>

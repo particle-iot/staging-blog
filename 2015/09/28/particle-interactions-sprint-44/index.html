@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle Interactions: Sprint 44 with Zach Supalla (Transcript) &mdash; Particle Blog</title>
+    
+    <link rel="stylesheet" href="http://spark.github.io/staging-blog/assets/main.css">
+    <link rel="shortcut icon" href="http://spark.github.io/staging-blog/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="http://spark.github.io/staging-blog/images/particle-horizontal-dark.png"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Particle Blog" />
+    <meta name="title" content="Particle Interactions: Sprint 44 with Zach Supalla (Transcript) ">
+    <link rel="canonical" href="http://spark.github.io/staging-blog/2015/09/28/particle-interactions-sprint-44/">
+    
+    
+    <meta property="og:title" content="Particle Interactions: Sprint 44 with Zach Supalla (Transcript) "/>
+    <meta property="og:url" content="http://spark.github.io/staging-blog/2015/09/28/particle-interactions-sprint-44/"/>
+    
+    <meta property="og:image" content="http://spark.github.io/staging-blog/images/particle-horizontal-dark.png"/>
+    
+    
+    <meta property="og:description" content="CEO Zach Supalla talks about Device Management price structure, community software requests, and his newest project."/>
+    <meta name="description" content="CEO Zach Supalla talks about Device Management price structure, community software requests, and his newest project."/>
+    
+    <meta property="og:site_name" content="Particle Blog">
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6107112/665726/css/fonts.css" />
+</head>
+<body>
+
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="https://www.particle.io/">
+                <img src="http://spark.github.io/staging-blog/images/particle-horizontal-dark.png" alt="Inc">
+            </a>
+            <a href="http://spark.github.io/staging-blog" class="home">Blog</a>
+            <a href="https://store.particle.io/">Product</a>
+            
+        </nav>
+        <nav class="tagline">
+          <a href="https://store.particle.io/" target="_blank" class="btn btn-outline">Buy Now</a>
+        </nav>
+    </header>
+</section>
+
+
+<div class="article-cover">
+    <div>
+        <img src="http://spark.github.io/staging-blog/images/triangles.png" class="image">
+    </div>
+</div>
+
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="Christine Sunu" target="_blank">Christine Sunu</a> &mdash;
+                <time pubdate datetime="2015-28-September" title="September 28, 2015">September 28, 2015</time>
+            </div>
+            <h1 class="title">Particle Interactions: Sprint 44 with Zach Supalla (Transcript)</h1>
+            
+        </header>
+
+        <section>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/l5GxYnzcUck" frameborder="0" allowfullscreen></iframe>
+
+<p><strong>Christine:</strong>  Well, so we are here. It is Sprint 44 in the Particle sprint naming system. We are here back again as promised with CEO Zach Supalla, who we’re very happy to see here. Zach was absent for a little while, which was sad, because he was... Where were you? You were--</p>
+
+<p><strong>Zach:</strong>  I was in Africa.</p>
+
+<p><strong>Christine:</strong>  He was on safari.</p>
+
+<p><strong>Zach:</strong>  I was on safari. So, it was sad maybe for you and I missed you guys dearly, but I had a really fun time. I didn&#39;t hunt animals. I was taking pictures of them. So there was no Cecil the Lion here, but I took lots of good pictures of great animals like zebras, and lions, and giraffes, and cheetahs, and leopards and all those kinds of things.</p>
+
+<p><strong>Christine:</strong>  That&#39;s very exciting.</p>
+
+<p><strong>Zach:</strong>  It was fun.</p>
+
+<p><strong>Christine:</strong>  I bet. Did you go to Pride Rock?</p>
+
+<p><strong>Zach:</strong>  Yes.</p>
+
+<p><strong>Christine:</strong>  Wait, really?</p>
+
+<p><strong>Zach:</strong>  Well, I don&#39;t think there is actually a Pride Rock, but you&#39;re driving through the Serengeti and you see these rock formations and you&#39;re like, &quot;That looks just like Pride Rock.&quot; Like some guy from Disney was sitting here and was looking over there and was like, &quot;This is going to be the center of my story for the Lion King.&quot; So, yeah, we did make lots of Lion King references while we were there.</p>
+
+<p><strong>Christine:</strong>  Cool.</p>
+
+<p><strong>Zach:</strong>  Yeah.</p>
+
+<p><strong>Christine:</strong>  Does the Electron work in Africa?</p>
+
+<p><strong>Zach:</strong>  The Electron works. I tested it. We had not yet tested Electrons anywhere other then the US, I think. While I was there I got the code to connect it to the network and to the cloud and everything. I just ran the code in my thing and it just worked. It just worked in Nairobi, which it was like a shock... The fact that I actually just plugged it in and it just worked immediately; first try, no debugging or anything was kind of shocking. But, it was really cool. I got it working in Nairobi, although I couldn&#39;t get my phone connected to the internet, so I wanted to flash D7 using Tinker and I couldn&#39;t get my phone online to be able to do that, but the thing was definitely online. The other guy said that I reported that it was in Nairobi, so like that was working. It was really cool. Then when I flew back, I flew through Amsterdam and tested it in the Netherlands also. So, it works in Nairobi and Amsterdam. I think now it&#39;s been tested in those two places and Norway, the US, the UK; London it&#39;s been tested, and then there&#39;s one or two more. So far, so good. Every country it works.</p>
+
+<p><strong>Christine:</strong>  Yeah. Cool. That&#39;s awesome. So you were here talking with me the first time we did this two months ago.</p>
+
+<p><strong>Zach:</strong>  Yep.</p>
+
+<p><strong>Christine:</strong>  Updates between two months ago and now?</p>
+
+<p><strong>Zach:</strong>  Two months ago feels like a long time ago. I&#39;m going to try and remember where we were. It&#39;s mid-September now, so that was mid-July. Is that right?</p>
+
+<p><strong>Christine:</strong>  That sounds... July, August, September, yeah.</p>
+
+<p><strong>Zach:</strong>  Yeah. Okay. So, mid-July. We were probably shipping the Photon, but not everybody had it. I was probably right?</p>
+
+<p>At that point we had shipped a bunch of Photons, but not all of them. Now the Photons have shipped, super exciting. The Electron has come a really, really long way, so I think a lot of the uncertain, spooky bits of the Electron have been resolved. We&#39;ve made a lot of progress on things like the carrier migration, the billing system, some of the biggest problems with the cellular platform. A lot of stuff has happened in firmware. From your notes, it looks like we were at version 0.4.3 of the firmware, we&#39;re getting to 0.4.6 now. A lot of development has happened. A lot of bugs have been squashed. Some of the multithreading stuff is in beta now, which is really exciting. A lot of people have been waiting on multithreading, so that&#39;s great. What else has happened? I don&#39;t know. Those are some of the big things.</p>
+
+<p><strong>Christine:</strong>  Yeah. I think that sounds great.</p>
+
+<p><strong>Zach:</strong>  Oh, Device Management for teams came out, so now there&#39;s tools which were in private beta, but now are available publicly for people who want to deploy a product and set a bunch of devices as products, and then control them in batch and do actions across an entire fleet of devices. That&#39;s available now, which is really cool and unblocks a lot of product creators. We have more and more people who are going through the process of creating a product and are scaling off and asking a lot of questions. We&#39;re changing bits of the product to support that, or the platform support those people and working out a lot of the kinks as real people actually start to interact with some of the software that we&#39;re building. So all that&#39;s super cool. Yeah. Some other things. I judged the <a href="http://disruptsf2015.devpost.com/">TechCrunch Disrupt Hackathon</a> this weekend.</p>
+
+<p><strong>Christine:</strong>  Oh, yeah.</p>
+
+<p><strong>Zach:</strong>  Which you participated in <a href="https://twitter.com/PCHHackathon/status/645643873180454912">as a mentor</a>. Right?</p>
+
+<p><strong>Christine:</strong>  Yeah. That was pretty fun.</p>
+
+<p><strong>Zach:</strong>  There were a hundred and sixty-five companies that did one minute pitches for things that they built over a weekend. I think probably about fifteen of them were hardware, maybe twenty, something like that. So, I judged that. That was cool.</p>
+
+<p><strong>Christine:</strong>  There&#39;s a really good picture of you judging; looking very judgey at the hackathon.</p>
+
+<p><strong>Zach:</strong>  Being very judgey, Super judgey</p>
+
+<p><strong>Christine:</strong>  Yeah.</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/tc-judge-zach.jpg"></div>
+
+<p><strong>Zach:</strong>  TechCrunch Disrupt is [Tech Crunch’s] big conference and they do this hackathon. It’s twenty-four, forty-eight hours to hack on something, mostly it&#39;s software apps, and you have one minute to pitch. What&#39;s amazing is, of a hundred and sixty-five people who are pitching, probably half of them never actually got to demo the thing they were hacking because they would spend a minute talking about the value of the thing that they had built and why it was important; something about the market they were going after, and then they never actually got to show anything. The other half did actually show their products and there was some really cool things that were there.</p>
+
+<p><strong>Christine:</strong>  Did you see the Particle-Powered laser tag gun?</p>
+
+<p><strong>Zach:</strong>  I didn&#39;t see a Particle-Powered laser tag gun.</p>
+
+<p><strong>Christine:</strong>  Oh, so this awesome dude named Michael Valente made this really great Particle Powered laser tag thing. You seat your phone into part of the gun, like in the back, and then it counts down how much ammo you have.</p>
+
+<p><strong>Zach:</strong>  Oh, that&#39;s cool</p>
+
+<p><strong>Christine:</strong>  It&#39;s really cool.</p>
+
+<p><strong>Zach:</strong>  Did that not make it on stage or something?</p>
+
+<p><strong>Christine:</strong>  I don&#39;t know.</p>
+
+<p><strong>Zach:</strong>  I didn&#39;t see that one.</p>
+
+<p><strong>Christine:</strong>  He was really awesome. He was one of the people that we hung out with when we were mentoring. John and Corey and I talked to him. Also, you probably saw the <a href="http://www.cambio.com/built-by-girls/">Built By Girls</a> group.</p>
+
+<p><strong>Zach:</strong>  Yeah. Built By Girls group. They had a bunch of them. I would say theirs were consistently some of the better demos, which was really cool. It was great to see there were a lot of women there. There were a lot of kids. There were a lot of people who were international. It&#39;s a very diverse group of people who are hacking, which is great to see.</p>
+
+<p><strong>Christine:</strong>  I almost died when I saw the <a href="http://devpost.com/software/beanstalks">Beanstocks</a> kids come on stage. There are these two kids who looked like they were...</p>
+
+<p><strong>Zach:</strong>  They were adorable.</p>
+
+<p><strong>Christine:</strong> ... maybe eight. They looked like--</p>
+
+<p><strong>Zach:</strong>  I guessed ten, but I&#39;m terrible at judging ages of children.</p>
+
+<p><strong>Christine:</strong>  I was thinking between the ages of eight and eleven. They were talking about this chore and money management for kids thing.</p>
+
+<p><strong>Zach:</strong>  Which was really cool because it was... Basically, they were saying that like, if you want to teach your kids money management, there&#39;s a bunch of apps out there where you can give your kid a fake bank account with fake money in, and then they can manage their fake money. But they were like, &quot;Why shouldn&#39;t it be with real money where you actually have a bank account because you&#39;re making an allowance and you can do chores and check off the chores and get real money deposited to your bank account from your parents bank account. Then you can manage that money.&quot; Which is a fantastic idea. Of course, yes. Apparently there are no real money management apps for kids. I thought that was super cool and also pitched by two, let&#39;s call them somewhere between eight and eleven years old, kids.</p>
+
+<p><strong>Christine:</strong>  Yeah. They were great.</p>
+
+<p><strong>Zach:</strong>  It was cool.</p>
+
+<p><strong>Christine:</strong>  Yeah, so that was Disrupt.</p>
+
+<p><strong>Zach:</strong>  Yeah.</p>
+
+<p><strong>Christine:</strong>  Awesome.</p>
+
+<p><strong>Zach:</strong>  So, Disrupt happened. Yeah, generally speaking, it was over the last couple of months a lot of what we&#39;ve been doing has been cleaning things up with the Photon, and watching people who are now interacting with it and trying to resolve some of the issues they&#39;re running in to. A lot of the bugs have been squashed. Then, pushing the Electron forward to get it ready for shipment pretty soon.</p>
+
+<p><strong>Christine:</strong>  Cool. You mentioned Device Management.</p>
+
+<p><strong>Zach:</strong>  Yeah.</p>
+
+<p><strong>Christine:</strong>  Which is now released pretty much.</p>
+
+<p><strong>Zach:</strong>  Now available. Yep.</p>
+
+<p><strong>Christine:</strong>  Let&#39;s talk about that a little bit. Device Management was originally intended to be for companies. It&#39;s for people who are creating products and building companies around it. There are some features that people have been talking about just wanting as individuals. The lowest tier is like fifty dollars a month, which is steep if you are looking individual human. Do you want to talk a bit about that?</p>
+
+<p><strong>Zach:</strong>  Yeah totally. I just read a post on this in the community a little bit earlier. I know there&#39;s been some conversation in the community about, &quot;Well, what is the pricing structure here? Why is it designed the way it is?&quot; Typically if you look at some of the other companies in our space and the way that they charge for their services tends to be dollars per device per month. This is dollars per user per month, and that scales a little bit differently, and has pros and cons obviously. There&#39;s been some interesting feedback in conversations about, &quot;Well, what are the tiers, and how do you make sure that this is relevant for the individuals, makers, people who are building things on their own; as well as teams that are actually scaling your product. And also teams where you may have a large number of people managing a small number of devices, which throws the ratio off a little bit.&quot; </p>
+
+<p>Generally, I want to talk about why we chose the pricing strategy that we did. I&#39;ll preface this by saying, &quot;Nothing&#39;s set in stone.&quot; I wouldn&#39;t say this is final, or how we will charge for things forever. This is our first time that we&#39;re taking a software product that is an advanced product and charging for that. It&#39;s definitely an experiment which we&#39;re eager to learn from. </p>
+
+<p>Imagine you are an entrepreneur who&#39;s developed a product, maybe launched a Kickstarter campaign, or it could be a big company too, it doesn&#39;t really matter. But, you&#39;re an entrepreneur, you&#39;ve launched your product, you&#39;ve sold a thousand things on Kickstarter and even shipped them to your customers. Maybe you made a widget-- let&#39;s say it costs you fifteen dollars to make and you&#39;re selling it for fifty, as an example, which is a pretty common price ratio. What really means is that if you&#39;re selling through a retailer, your cost might be fifteen, you&#39;re going to sell to a retailer for twenty-five at a wholesale price, and they&#39;re going to resale it for fifty on the shelves. This retailer could be Target or Best Buy or whomever. So you have ten dollars in margin. You make ten dollars of profit every time you sell one of these things. </p>
+
+<p>What we see is when you charge per device per month for services associated with the product, you run the risk of essentially consuming the margin that&#39;s available, which is to say, let&#39;s say it costs, to make the math simple, let&#39;s say it costs a dollar a year to have the device hosted, and there&#39;s ten dollars of margin, so if someone uses the product for ten years, then you&#39;ve lost all of your profit. You&#39;ve given all of your profit away to the person who&#39;s providing that service. Then you are now net even; you&#39;ve made no money, and any further use will lead to loss. This is, I think, I really big challenge when somebody looks at running their product on a platform like ours. You&#39;re going to look at it and say, &quot;Well, I&#39;m taking on a liability, especially if it&#39;s a new product or a new company, like a sort of question mark liability. I don&#39;t know how long my customers are going to use this. I don&#39;t know really how much I&#39;m going to pay, but you know how much money you have and there&#39;s a finite amount of profit that you have to give up. So, this is a big risk that we saw when we looked around.</p>
+
+<p>We really started the company a couple years ago, we saw this as a huge barrier for people who wanted to use platforms and, I think, one of the primary reasons that people weren&#39;t using the platforms that were available. So, we thought we could do better on our pricing model. What was important to us is to say that the functionality of the product should not be tied to an ongoing revenue stream unless necessary. Basically, the way I feel about it is, I don&#39;t want to charge customers to make their product function. You may have a fixed cost associated with getting it working, but if you have a subscription, then you create this unending liability for the company. That&#39;s very risky. So, I didn&#39;t want to tie any subscription fee to the functionality of the product. </p>
+
+<p>(When we do cellular with the Electron, it&#39;s a little bit different because there is actually a cost associated with running the product with the carriers. So, it&#39;s a little bit different when you&#39;re connecting something to a cellular network, but for Wi-Fi, you&#39;re already paying your ISP for internet, so that should already be covered.)</p>
+
+<p>What we decided was what we want to do is rather than charging according to the kind of usage of the product, we want to charge according to the value that we think our customers are generating. You connect a product to the internet, and because it&#39;s connected to the internet, you can collect all this data off of it and things like that, that it makes your marketing part of your company better. Or, it makes your next product better, and there&#39;s some amount of money that you&#39;re willing to pay for that. We want to tie our costs to the value that you&#39;re generating. </p>
+
+<p>What is the metric of value? In theory, you could go to every company individually and figure out, &quot;Why are you using this? What value is it generating for you product?&quot; Then, you could cut that up in to fractions, like take a fraction of it and that would be our service fee. That would be extremely complicated and really difficult to do it scale because every company derives value from this differently.</p>
+
+<p>We thought, &quot;Well, if you&#39;re generating a lot of value off of the platform, then you probably also have a lot of people who have access to the data. If it turns out that it&#39;s really good for customer service, then you might have your customer service team have access to the data, so that when somebody calls in and says that their device isn&#39;t working, the person on the phone can actually drill down and look at the device using our Dashboard and our platform tools. We thought, &quot;Well, okay. The value is often tied to number of users, and so let&#39;s charge for number of users and that will be a metric for value generated by that... value generated for the person on the other side.&quot; </p>
+
+<p>The downside of that is, I think, that the model is very simple right now. It&#39;s forty-nine dollars per user. It will get more complex over time and there will be more tiers and there will also be more features. There will be higher-end tiers and there may be lower-end tiers. But, the model going out is really simplistic, which it kind of has to be for us right now because our billing system is very simple. We literally can&#39;t actually manage a lot of complexity in terms of what the tiers are, yet. We will and we&#39;re building out a more complex billing system for the Electron and the SIM cards there. We&#39;ll have more capabilities, but we needed to start out with something very simple. So, I think what I&#39;ve heard is a very long winded way to address this.</p>
+
+<p>I&#39;ve definitely heard the feedback of like, &quot;Well, what this means is that these features are not available to people who are individuals because forty-nine dollars per person is a lot if you&#39;re just someone who is building a thing for yourself or for a couple friends, or for your family; or whatever.&quot; So, those tools aren&#39;t available to you. There&#39;s a couple things about that. I’d love to get-- if you have comments on this just post in the chat. There&#39;s like a ninety second delay, so we won&#39;t see what you&#39;re saying for a little bit, but just start writing stuff and we&#39;ll keep our eye on it.</p>
+
+<p><strong>Christine:</strong>  Yeah, and for people who aren&#39;t directly here right now, feel free to post in the community thread on the interview and then we can answer that as well.</p>
+
+<p><strong>Zach:</strong>  Yeah. Exactly.</p>
+
+<p>I have a couple answers to that. One is, a lot of the features are free. We have a free tier. I think that part of what we might be hearing is some of the features that are in the paid tier are relevant. Like maybe some of the features that are in the paid tier should go in the free tier. Which features are available here versus which features are available here. Maybe it should be a little bit different. That&#39;s one essential solution.</p>
+
+<p>Second is, I think maybe there should be a maker tier that has some features but not others, or only works for X number of devices where X is relatively small, so it&#39;s not something that people who are really scaling are going to use. I think that&#39;s also relevant. Those are definitely options we&#39;ll consider. </p>
+
+<p>My perspective on the pricing is, I think it&#39;s important that we keep things as is for a little bit just to gather more feedback. I want to have these conversations. I want to hear what people think about the pricing in particular, what features are relevant to them, and other ways. There were some good suggestions in the forums today about ways that we could create a lower tier for makers for some of these tools. I&#39;d love to have those conversations. I&#39;d love to gather feedback. I don&#39;t want to make any changes right away because I think that we definitely we see pricing as somewhat of an experiment, especially to start out with. If we go out with a certain pricing scheme and then we immediately change it, it makes it really hard to learn lessons because it&#39;s really confusing for everybody. I want to hear the feedback that all of you out there have. Please share with us in the community. We will absolutely be listening to it. We may not take immediate action because we do want to leave the pricing out there for a little while and gather that feedback. But, we are listening. We will engage in that conversation.</p>
+
+<p>I think that it is important for us to make sure there&#39;s a deep underlying concern here, potentially, which is like, &quot;We are evil now.&quot; No. We&#39;re going to support enterprises. People are worried that because we’re building enterprise tools, we&#39;re leaving our maker roots behind. Which we&#39;re not. I would even say the opposite, which is, we see that our business will always be this sort of interesting mix of enterprises and makers. I think, by the way, that the two groups are a lot more overlapping than most people do. There&#39;s businesses and there&#39;s makers, and a lot of the work that we get to do for the maker community is not necessarily positive ROI, but it&#39;s there because it builds the community in general. The fact that we have paying enterprise customers, basically funds the development of the stuff that we do on the maker side. One thing is that they are intrinsically tied together, and I think it&#39;s good. </p>
+
+<p>It’s natural, I think, where when we&#39;re starting to charge for things and create enterprise tiers for people to feel left behind, but it&#39;s not, it&#39;s all still tied together. We are very much a company that supports makers. Makers are our bread and butter. We are makers. We continue to plan to support that. We will be adding capabilities to the enterprise side, and we&#39;re also going to add capabilities to the free tiers, and continue to release free and open source tools that are just going to get better. They might be different features, but like both parties; both groups are going to continue to get new developments over time. This isn&#39;t like the beginning of, &quot;Oh, we only do enterprise stuff.&quot; Absolutely not. We are still good guys and we plan on continuing to do that. This shouldn&#39;t be perceived as, that there&#39;s any sort of fundamental change in our business. This was always part of the plan. But the plan always involved continuing to build this amazing community of developers and engineers and makers, that make us who we are, and building a profit seeking, revenue driven business that&#39;s about supporting enterprises that want to scale; that want to scale products on a platform.</p>
+
+<p><strong>Christine:</strong>  Yeah. It sounds like there was a lot of thought that went in to creating this pricing structure and that it&#39;s a first try. That we need to actually run this experiment for a little while, and then we will revise it and change it and try and make it as good as possible. Given that, I think it&#39;s great to hear feedback from the community. If you guys have thoughts about this, I would love to hear about them. If you have thoughts about parts of the different tiers that you think would be really valuable to you, I think that that&#39;s a really good idea to let me know; post on the community, send me a PM. We are very committed to making sure that you guys have all the tools you need, whether you are a maker and a DIYer, or a person building a small company, or a person at a large company; or all of these things.</p>
+
+<p><strong>Zach:</strong>  Yeah. I see a comment from ScruffR, which I&#39;ll address because it&#39;s a good question. Is it possible to hop on and off of the Dashboard? If dev cycles go quiet, can you sign off, and later sign on again? Which basically I think means like &quot;Well, I might not want to pay now, but I want to keep my eye on it and be able to see the features that are available because I might want to pay for it later and keep testing it.&quot; Like if you have a thirty day free trial, do you use it up with the first thirty days, and then you never get access to it again? </p>
+
+<p>What I would say is: we are still people, and we are on the end of an email or phone or a community post. If you go sign on/sign off, or you open an account/close your account, then open an account again, what happens? Good question. I don&#39;t know. I bet you the guys that are building it don&#39;t know because nobody&#39;s done it yet. I will raise that with them. But even regardless, if it says, &quot;You know your free trial&#39;s expired,&quot; just email us because we don&#39;t want to eliminate people... We&#39;re people, just don&#39;t abuse it. Hopefully, you get to the point where you start using it. You&#39;re like, &quot;Oh, this is valuable,&quot; and you want to pay for it. Then we&#39;d start charging your credit card. </p>
+
+<p>In general, what we&#39;re going for is we want to charge people for services that they find are valuable. Our goal is that you should want to pay for this because you should feel like, &quot;Oh my god, this is amazing and I need this and I definitely need this company to stick around, so I&#39;m willing to pay them. In fact, I wish I could pay them more to make sure that they stay around to continue to provide me this service.&quot; That&#39;s what we&#39;re going for. Hopefully we can get there if we&#39;re not there already.</p>
+
+<p><strong>Christine:</strong>  That was very comprehensive. That&#39;s more in depth than I thought you were going to go. Thank you for giving that incredibly in depth explanation and your logic behind that.</p>
+
+<p><strong>Zach:</strong>  Of course. I&#39;m an open book.</p>
+
+<p><strong>Christine:</strong>  We did a poll on community recently that talked about features that people might want to see. There&#39;s a lot of things that came up there. We can go through that a little bit, and I think in the meantime people should feel free to post questions/ask questions about software, or things that they might want to see that they don&#39;t see already.</p>
+
+<p><strong>Zach:</strong>  Yeah. Let&#39;s talk a little bit about what Particle should do next. If you have thoughts, if you&#39;re listening live and you want to contribute some thoughts on what Particle should be doing next, start typing in your thoughts since there&#39;s a lag and we&#39;ll go to the community forum and start addressing some of that stuff there. I&#39;ll preface this by saying, &quot;I make no promises here.&quot; We should have just a good old chat and I can talk about some of the things I think would be interesting for us to do. Right now we&#39;re getting the Photon working and getting the Electron working, so our heads are very much there. But, pretty soon all that will be in place and we&#39;ll be like, &quot;Oh, what&#39;s our next project going to be?&quot;</p>
+
+<p><strong>Christine:</strong>  In the poll: 66 people have voted in to it. There are 22% who want to see more hardware. 45% want to see more software. 22% percent asked for more resources and 9% asked for a category called &#39;something else&#39;. I left this really open because I wanted people to be able to post a discussion below, because I think there&#39;s a lot of different things that people might want. This is very hard to pin down a poll with just the answers pre-selected. It looks like a lot of people asked for software, which I think is legitimate.</p>
+
+<p><strong>Zach:</strong>  Let&#39;s talk about some of the things people talked about. The first one here said, &quot;An easier language to work with in C++. I don&#39;t know what would be most appropriate, maybe Rust, Python or Swift.&quot;</p>
+
+<p>I think this is a super interesting one. I have dreams about this. I will give you my two cents. By the way, if there are people in the community that want to contribute to this-- it&#39;s one of these things that we haven&#39;t quite got around to thinking about, but we will at some point. If you want to be one that starts to drive some of that, this is definitely something that could be pursed through community efforts.</p>
+
+<p>Basically, we&#39;re starting to see a lot more of development in other programming languages on embedded systems. There&#39;s some JavaScript stuff, there&#39;s like Tessel and Espruino, there&#39;s some Python. I can&#39;t remember the name of the Python development board. There&#39;s at least one Python development board. There&#39;s other stuff happening. But, you always run in to this problem of high-level languages, you have to do some kind of interpreting or something. You take a pretty big performance hit on a lot of the stuff that you want to do on a microcontroller. You can&#39;t really do anymore if you&#39;re doing like JavaScript, for instance.  The Tessel V1 had this problem where if you just said like-- you blink an LED, and you say, &quot;Blink every thousand milliseconds,&quot; it was like plus or minus two hundred milliseconds. It&#39;s so not accurate from a timing perspective just because of the way that you&#39;re actually trying to get that software running on that system. </p>
+
+<p>I think that there are, however, more modern high-level languages that are still very efficient. In particular, Rust is really, really cool. I would encourage anyone who&#39;s watching now or later to go read a little bit about Rust. Rust is a relatively new program in language being developed by Mozilla. It&#39;s a systems language. It has a lot of the features and capabilities of C and C++, just to say. Zero overhead distractions and it&#39;s type safe, and all these things. However, it&#39;s kind of like those languages after watching Ruby and Python and all these modern languages be developed, it&#39;s got some really cool features. It&#39;s, I think, easier to use. They claim that it&#39;s crash free; it&#39;ll never crash. The compiler is great. Really great library management system called Cargo. The compiler also has really human readable; easy to understand compiler, so if you mess something up, it explains to you very well and very clearly what you messed up. The guide and the tutorial are incredible. It can run on an embedded system. It can run on bare metal. </p>
+
+<p>I think that Rust has the potential to supersede in the long term C and C++ in the embedded space, but it&#39;s not there yet. It&#39;s very new. I think there&#39;s experiments to try and get it to run on microcontrollers, but they just haven’t gotten very far yet. I would love to see Rust on embedded devices. I would love to see us supporting a Rust-based development path for writing firmware for your device. That&#39;s something maybe down the road, but if anyone in the community wants to take that on, I think it would be really cool and we&#39;d love to support it. There are like Lua is another thing that you can do, and Lua is also pretty cool, but I think that Rust is pretty fancy. That&#39;s my thoughts on that.</p>
+
+<p><strong>Christine:</strong>  In general, I would love it if we saw more language wrappers on the community. I know that people have different preferences to code and different languages and I would really like for us to get more of those and publicize the ones that already exist just because it&#39;s great to have those resources.</p>
+
+<p>Oh there&#39;s a question on making secure requests from the Photon.</p>
+
+<p><strong>Zach:</strong>  I&#39;ll try and address that question. So, making secure requests from the Photon. I think that&#39;s a good request and I&#39;ll address that quickly. There is something that you can do in the short term if you want to make a secure request from a Photon. Check out our webhooks feature because right now the support way of doing that is you can send message to our web service which will then fire webhook off to the API of your choice and you can design what that webhook should look like. It has the advantage of not putting a lot of burden on the microcontroller, which is resource constrained. </p>
+
+<p>Although, it&#39;s not as necessary for the Photon. It was designed that way for the Core, which really had no RAM, so you couldn&#39;t do HTTPS requests. With the Photon, one can. We will be adding support for doing that straight from the device. We don&#39;t have that yet, but there is a way to solve the problem which is to do it through the cloud. I think also, to point out, if people are planning on doing development with the Electron, that kind of feature will be particularly relevant on the Electron. If you think about it you want to fire a secured, encrypted request off to some web service, if you do that from a cellular connected thing, you have to pay for the bandwidth associated with the encryption overhead, which can be like five kilobytes, which doesn&#39;t sound like a lot, but if you&#39;re paying for every megabyte, it can add up really fast. Whereas, if you use our protocol to the cloud, it might only be only 20/30/50 bytes to send that message up to the cloud, which is encrypted. Then the cloud can take that through with webhooks and convert it to something that&#39;s a complete web request outside of the cellular network, so you&#39;re not paying for that bandwidth. So, it&#39;s cheaper; significantly cheaper with an Electron to use our cloud platform for secure requests to other web services then it is to fire them directly. So, something to keep in mind.</p>
+
+<p>Then we have another question. Where is the future with Azure going? From Richard. So, Richard asks, &quot;What&#39;s the future with Azure?&quot;</p>
+
+<p>The future with Azure. We&#39;ve been working a lot with Microsoft behind the scenes. So Azure, they&#39;re developing some really cool stuff targeted with the Internet of Things. The thing that&#39;s been most visible for Microsoft has been the Windows 10 IoT Core, so they now have a version of Windows that will run on a Raspberry Pi, for instance. It&#39;s super cool. With Microsoft, I think right now we&#39;ve got some tutorials to explain how to build a weather station that sends data to Azure through our cloud platform, kind of using our tools combined with theirs. What we want to do over time is make that integration a lot smoother. Right now it requires you to do coding in a bunch of different places. It&#39;s not terrible, but it&#39;s not exactly the smoothest process. That&#39;s something that we want to change by making it really, really easy to go in to your Dashboard and activate an integration with Azure. Then, all of the events that you generate out of your devices will just be pumped directly to your Azure account. That&#39;s something that we&#39;re working on with Microsoft and I think will be really cool. </p>
+
+<p>I think it&#39;s particularly relevant. A lot of people probably in our community work for companies that are Microsoft shops. A lot of people doing development in C# and .NET and very comfortable with all the tools that Microsoft provides. I think that these tools will be really great for anyone who&#39;s doing development of a product within that environment. You want to work within the Microsoft set of tools you&#39;re comfortable with, but also engage with these Internet of Things devices. Although, if you&#39;re using a Raspberry Pi, you can use Windows Core, if you&#39;re using an embedded system, there isn&#39;t really a Microsoft way to interact with that device. This helps you integrate these kind of devices in to a Microsoft based ecosystem. Really, really cool, and they&#39;ve been great to work with, also. We&#39;re having a great time engaging with the Microsoft folks. I think they&#39;re really smart. Their IoT team is doing really cool things. So, there&#39;s Microsoft.</p>
+
+<p>All right. Should we go back to the community page?</p>
+
+<p><strong>Christine:</strong>  Yeah, we can go back.</p>
+
+<p><strong>Zach:</strong>  Let&#39;s see what else is there.</p>
+
+<p><strong>Christine:</strong>  I feel bad that I&#39;m making you talk so much.</p>
+
+<p><strong>Zach:</strong>  No, it&#39;s good.</p>
+
+<p><strong>Christine:</strong>  Right after you were recovering.</p>
+
+<p><strong>Zach:</strong>  Yeah, I was sick. I&#39;m getting better now.</p>
+
+<p><strong>Christine:</strong>  There was a request for more resources, particularly from cloud side. I know that that&#39;s something that&#39;s been echoed by other individuals in terms of resources. Making the experience better with the resources that we have. Making those resources more visible, easier to use and smoother. Ironing out bugs in the IDE. Fulfilling a backlog of feature requests. Things of this nature. ScruffR made a comment that he wanted some of these bugs get ironed out and that is probably the most liked post within this post.</p>
+
+<p><strong>Zach:</strong>  I think it&#39;s good feedback. I think we&#39;re getting to a place where we&#39;re now. [We’re starting to] have the resources to dedicate to smoothing out a lot of that stuff. There was a lot of stuff that was happening that was like, &quot;Okay, we have to update a lot of these tools to work with the Photon. There&#39;s some things that are different about the Photon, so there were hiccups along the way.&quot; Now a lot of that stuff, the compatibility is there across the tool set. Now we have the opportunity to really smooth things out. That&#39;s good feedback and definitely something that we&#39;re going to be investing in a lot in the next couple sprints.</p>
+
+<p><strong>Christine:</strong>  Yeah. I&#39;m really looking forward to having a feature polish sprint. I think that we will do that at some point. It&#39;s going to be really exciting to just bring all of the nice things that we have working at 85% to 95% percent all the way up to 100%. Very, very cool.</p>
+
+<p><strong>Zach:</strong>  I see Rockvole posted and got a good amount of likes on it, too, mesh networking so we can communicate directly between Photons and used Photons to extend the Wi-Fi range by hopping data across devices. Meshing is definitely something, and I should say not purely meshing, but just like having a way to do device to device communications with a low-cost radio is definitely something that we think is super interesting. We will be looking at doing things like that.</p>
+
+<p>Some more posts, moving forward then. You asked, &quot;Stuff is already being used by Bluz for one, are there plans to expand stuff to support Thread when it comes in to firmware?”</p>
+
+<p>Thread. I would say, I definitely want us to support open standards for doing device to device radio communications with a low cost radio-- low cost, low power radio, over a relatively long range. Which is a weird way to answer that question because it&#39;s like, &quot;Well, what does that mean about Thread?&quot; Thread, I think, is super interesting. It hasn&#39;t really hit mainstream yet, and so we don&#39;t love to be the first people on protocol because we want to wait and see if it&#39;s really going to take off. Thread is also a little bit funky because I think the design of Thread is really great and I think the people behind Thread are really great. Thread is also very much geared towards home and we have some customers who are doing consumer home stuff, and we have other customers who are doing more like industrial, outdoors things. The question is, &quot;How do we support each of those customers and for whom is mesh most interesting?&quot; The way I think about mesh, kind of radio kind of stuff, is I think that we will definitely do something there, whether it&#39;s Thread, 6LoWPAN some other 802.15.4 thing, sub-GHz, LoRa, Weightless. Now I&#39;m getting in to the really obscure protocols. I&#39;ve been reading about this recently.</p>
+
+<p><strong>Christine:</strong>  Is this going to be a game of how many protocols you can name?</p>
+
+<p><strong>Zach:</strong>  I can name so many protocols. Wait, seriously.</p>
+
+<p><strong>Christine:</strong>  Wait, we&#39;re really going to play this game?</p>
+
+<p><strong>Zach:</strong>  Yeah. Let&#39;s play this game. Okay. Should we actually? This seems like a really stupid game.</p>
+
+<p><strong>Christine:</strong>  Let&#39;s spend the time answering more questions.</p>
+
+<p><strong>Zach:</strong>  Okay. I won&#39;t play that game. I think we&#39;ll do something like that, whether it&#39;s Thread or something else is still a little bit question mark. Also I think that in general, we can only do so many things ourselves. We can only support so many boards at the same time. We&#39;re really excited about things like Bluz and Oak, which is from Digistump, that are what we call compounds, which are partners of ours that are developing other hardware platforms that work with our software platform because basically it gives us access to more hardware tools. It gives our community access to more hardware tools without us trying to build twelve things at once with a team that&#39;s not really big enough to do that. I&#39;m really excited about Bluz and I think as soon as it&#39;s finished, we&#39;re going to do our best to make sure that it&#39;s a first class citizen within the community and that people who work with Bluz have the same experience as they would using any other board that has a Particle logo on it. If there are any of you out there that have thoughts about other tech that might be interesting in the context of Particle that you want to try and build out a Bluz kind of thing, do a Kickstarter campaign for a dev board, we&#39;d be happy to support you. We love to see other hardware on the platform. That would be super cool.</p>
+
+<p>What else have people talked about? Multi Device Management on a smaller than enterprise scale. Dan, we talked about this a little bit earlier and I went on a very, very long monologue about what our plans are there. I would encourage you to-</p>
+
+<p><strong>Christine:</strong>  There will be a transcript.</p>
+
+<p><strong>Zach:</strong>  Later on, read the transcript, or check out the full video. Because we do have thoughts there. I won’t repeat myself, because it took a really long time to say all that stuff. 
+    “Can we do more than one post set per second through webhooks with paid subscriptions?” That&#39;s a good question.</p>
+
+<p><strong>Christine:</strong>  We&#39;ve actually talked about this with Elite a little bit. We&#39;ve been thinking about maybe loosening up the general user restrictions for very trusted users. I think that this is like a no promises roll-out, because we have to see how this plays, but there are definitely some thoughts about making it possible for people who have higher contributor levels to be free of some of the restrictions that lower level users have.</p>
+
+<p><strong>Zach:</strong>  Really interesting. I think that&#39;s really interesting. I&#39;ll just share some thoughts on there real fast, which is I think the reason that we put rate limiting in place is because we have a lot of devices running and we&#39;re offering this web platform for free, so we have to maintain our cost and manage it and make sure that the cost doesn&#39;t get out of control. If we take off rate limiting it can very quickly become very expensive to run that service. That said, I do think that there&#39;s some really interesting ways of potentially making it so that folks who have earned trust within the community can potentially get the ability to send more messages. </p>
+
+<p>I think in particular part of the reason why that is… Let&#39;s say there wasn&#39;t any rate limiting. What you&#39;d see a lot of people doing is putting in a loop, like Spark.publish, and you&#39;d waste an enormous amount of money on people who are writing not-great code and publishing thousands of messages a second because that&#39;s as fast as the processor can go. That&#39;s a waste of money. I think for people who&#39;ve earned a little bit more trust in the community, if you&#39;re trying to send more, you&#39;re probably not doing it because you&#39;re not writing efficient code, you&#39;re doing it because you&#39;re actually trying to send more information, which I think is a great reason for us to relax the limits there. I also think there&#39;s opportunities for doing a paid service there where basically, if you&#39;re like, &quot;I need to send more than this and I&#39;m happy to pay a little bit extra to be able to do that.&quot; Or, people who are paying for the Fleet Management tools have some shift in that. I think those are super, super relevant and definitely really interesting. Those are some things I&#39;ll take back and think a little about and discuss with the folks on the team. Those are great ideas.</p>
+
+<p>ScruffR says, &quot;One of the things that&#39;s been postponed was the unification of IDE behavior library import, flat file hierarchy.” Those are all things that are geared up for us to start working on. Wojtek, who does a lot of the development on the IDE, has been waylaid by a lot of changes to support the Photon, but is now getting free of those and is starting to put energy in to unifying the IDEs. Just to let you under the hood a little bit, the web IDE is-- The backend and front end of the web IDE are like this. The web IDE does not access our API. It has it&#39;s own API, which is not really the way that we wanted to have it work. Long-term what we want to do is put all the functionality of a IDE in to our API, so then our web IDE is a much thinner client that interacts with API. That also means that… you can do development in other tools that can interact with API services. That makes this awesome. Then, also say that other people can load their IDEs or download plugins for other IDEs that can engage with the same tools. For instance, download all of your software in to the IDE. That&#39;s definitely something we want to do. </p>
+
+<p>There will probably be a pretty decent period of time where you&#39;re not going to see any changes because what Wojtek’s going to be doing is behind the scenes, like rebuilding everything to work with an API. That means nothing will change for a little while, and then once that&#39;s done, then all of a sudden all of these features will exist in other places. One of the goals here is to be able to open source a web IDE, which is something that&#39;s been closed source, not purposefully, but just because it&#39;s design is not one that lends itself to be open sourced very well. That is one of the goals here. Another thing, by the way, if the community&#39;s interested in engaging in this, there’s an opportunity to do that.</p>
+
+<p><strong>Christine:</strong>  In general, if you see something that you feel like should be improved or you wish that it were better in one way or another way, or you have an enhancement that you wish existed, just get in touch with us. If you wanted to work on it, we&#39;re very open to giving you the resources you need to help you make the platform better as well. Very into that.</p>
+
+<p>We are actually moving out of this office on Friday. Right? Is that moving day?</p>
+
+<p><strong>Zach:</strong>  Yes. Soon. We&#39;re moving in to a new office, so you&#39;ll see a new, not gray, maybe another different color wall in the background the next time we do this. Which will be... I don&#39;t know what the color of the walls is there? Do you?</p>
+
+<p><strong>Christine:</strong>  The what?</p>
+
+<p><strong>Zach:</strong>  What color are the walls?</p>
+
+<p><strong>Christine:</strong>  I have no idea. I did walk by the new office and it&#39;s pretty. I think the walls are white. I&#39;m not sure.</p>
+
+<p><strong>Zach:</strong>  White&#39;s good for walls.</p>
+
+<p><strong>Christine:</strong>  On Friday for the Particle Lunch Break probably everyone will be at home. We might push the Particle Lunch Break way earlier because I had some feedback that it&#39;d be great for us to serve at various time zones to have them at different times, in the world of San Francisco Pacific time. So, having one at breakfast Pacific time might be good. We&#39;ll see if we can do that. I&#39;ll put it up on the community when we know what&#39;s going on.</p>
+
+<p><strong>Zach:</strong>  Just comments on the other posts that have come in. Lucas asks, &quot;Love to see examples of starter PCBs that support the P1P0 modules. For beginner PCBs design that is a major hurdle when transitioning to modules.&quot;</p>
+
+<p>I think that is a spectacular idea. Actually, this is one that I would also encourage folks in the community to do. I love finding these opportunities where it&#39;s like a business opportunity where somebody could make a couple bucks on the side… For instance, if you wanted to, on a breakout board, make it easy for people to get started with a P0 or a P1 and put it up on Tindie or something... you can go sell it on Tindie&#39;s website, or we&#39;d even sell it on ours. If you want to make some breakout boards, just PCB&#39;s with no components on them where you can put a P1 or P0 on it, you want to sell it, just contact us or just do it and sell it and then we will tell a lot of people about it. We will email it to all of our many, many, many followers, and they will go buy it from you. You&#39;ll make a bunch of money. Easy win for you, for those of you out there who might do that. I think you&#39;re right, it&#39;s making that leap from zero to designing a PCB&#39;s can be tricky. Although there&#39;s some great tutorials on SparkFun. I highly, highly recommend for getting started with EAGLE. That&#39;s how I learned. They&#39;re just awesome. There&#39;s free versions of EAGLE that are available. EAGLE&#39;s a Cad software. I also highly recommend <a href="https://upverter.com/">Upverter</a>. It&#39;s a great tool to use; web based circuit design. </p>
+
+<p>You also asked is, &quot;Is hangouts to talk about hardware/software and IoT enablement for those wanting to produce a product?&quot; Yes. We&#39;re talking about everything. It&#39;s great to have a discussion about all this stuff.</p>
+
+<p>Endre, you asked, &quot;Is the source code open to look at the cloud stuff for someone who&#39;s interested?&quot; Yes. www.github.com/spark/spark-server. Spark-server is our open source web thingamajig, so check that out. You can download it. You can look at it and run it. It isn&#39;t totally up to date with the Photon yet. It can do a lot of the controls of the Photon. It can&#39;t do an over the air firmware for Photon, but it&#39;s still there. We&#39;ll catch it up for the Photon at some point soon.</p>
+
+<p>“Is ESD a safety concern when handling the Photon or the Core?” I think that&#39;s a good question. I&#39;ll make sure that Brett puts that information in the data sheets. However, I wouldn&#39;t worry about it too much. I have never seen [that happen]. I&#39;ve rubbed my feet all on the carpet and grabbed one and I haven&#39;t seen any problems yet. So, there. I think they&#39;re pretty resilient. But, always handle with care.</p>
+
+<p>William you say, you have a question about the SoftAP. Go ahead and ask the question about the SoftAP.</p>
+
+<p><strong>Christine:</strong>  Yeah, after the lag passes.</p>
+
+<p><strong>Zach:</strong>  After the lag passes.</p>
+
+<p><strong>Christine:</strong>  Probably that will be like sixty seconds from now.</p>
+
+<p><strong>Zach:</strong>  But you are welcome to ask your question.</p>
+
+<p><strong>Christine:</strong>  I have a new joke.</p>
+
+<p><strong>Zach:</strong>  Oh, yeah. Tell your joke.</p>
+
+<p><strong>Christine:</strong>  Well, you&#39;ve heard it, but they haven&#39;t heard it.</p>
+
+<p><strong>Zach:</strong>  That&#39;s okay. I will pretend like I haven&#39;t heard it.</p>
+
+<p><strong>Christine:</strong>  What did the octogenarian pirate say?</p>
+
+<p><strong>Zach:</strong>  I don&#39;t know. What did he say?</p>
+
+<p><strong>Christine:</strong>  Aye matey. (I’m eighty.) Get it? Because an octogenarian pirate is eighty.</p>
+
+<p><strong>Zach:</strong>  I&#39;m eighty. Aye Matey.</p>
+
+<p><strong>Christine:</strong>  The pirates say, &quot;Aye matey.&quot;</p>
+
+<p><strong>Zach:</strong>  That&#39;s good. That&#39;s good stuff.</p>
+
+<p><strong>Christine:</strong>  I think it&#39;s a pretty good joke.</p>
+
+<p><strong>Zach:</strong>  It&#39;s not a Photon joke. I thought you might be a Photon joke.</p>
+
+<p><strong>Christine:</strong>  No, that one wouldn&#39;t make sense to put in the Photon box. We need a good Electron joke for the Electron box. I don&#39;t know if there&#39;s going to be a nice slip of paper like there was for the Photon box version.</p>
+
+<p><strong>Zach:</strong>  I&#39;m sure we&#39;ll find it.</p>
+
+<p><strong>Christine:</strong>  And, there&#39;s a question.</p>
+
+<p><strong>Zach:</strong>  There we go. “There was a thread awhile back about creating the SoftAP library to allow direct Wi-Fi connections between Photons. Is there any progress?”</p>
+
+<p>Yeah, so we&#39;ve started to make some work on one particular aspect of it, which now is doing a HTTP version of the setup process. It&#39;s still pretty focused on the setup process currently, but that&#39;s the first step. We do want to do more development there and generally make it possible to do more on SoftAP mode. That is definitely something that&#39;s happening. I would highly recommend pinging @mdma in the forms. That is Mat McGowan, he’s a firmware engineer. If there&#39;s a thread that&#39;s gone quiet, ping him about it and make sure it&#39;s still on his radar. Definitely still in the plans; in the works.</p>
+
+<p><strong>Zach:</strong>  Can I show off my project? I want to show the people this thing that I&#39;ve been working on. I think it&#39;s going to be cool. I will at some point write up a project about this, but it&#39;s so early I haven&#39;t written anything up yet.</p>
+
+<p>What I wanted to do is I wanted to make a thing to help demonstrate some of the new capabilities of Device Management for teams, which lets you do over the air from our updates to an entire fleet of devices.</p>
+
+<p><strong>Christine:</strong>  Is it a drone?</p>
+
+<p><strong>Zach:</strong>  No, it&#39;s not a drone. No I haven&#39;t made any progress on my drone lately. Thanks, Christine.</p>
+
+<p><strong>Christine:</strong>  You&#39;re welcome.</p>
+
+<p><strong>Zach:</strong>  What I wanted to do was make something that could show off interaction between devices, and then also over the air firmware updates. I bought some stuff from Adafruit. Adafruit has this really cool, super cool thing called a trellis which is a board that looks like-- See this keypad with this elastomer keypad? You take this and you put it in a 3D printed box, which they have a thing called an instameter, or something like that, that&#39;s kind of like a midi control board, so you can see how this kind of looks like if you imagined it in a box, it&#39;s like a midi keypad, and there&#39;s LEDs in each of these. </p>
+
+<p>I&#39;m 3D printing a box, or Christine is 3D printing a box for me because I don&#39;t know how to use the 3D printer. This is the first piece. The other pieces haven&#39;t printed yet. Basically, there will be a blue box that this thing goes in, and of course, there will be a Photon in there. This will be battery powered, Photon powered wireless, looks like a midi controller. Each of these sixteen pads will be set to control one of sixteen internet buttons, so if you haven&#39;t seen the internet buttons, this is what they look like in the package. Let me take it out of the package to show it off. So, you&#39;ll be able to control them all.</p>
+
+<p>What will be cool is I&#39;m going to set them up in different places, so I&#39;ll have a couple of them in the office here, a couple in our Minneapolis office, a couple in my apartment, and I&#39;m going to set up some Dropcams with some cameras pointed at each one of them. You&#39;ll be able to, on an iPad screen, see all sixteen in a couple of different locations, and then you&#39;ll be able to control them by hitting these little pads. Each one of them will turn one of them will turn one of them on and of, so you can just do all this instant control of all these things in various places. Then, I&#39;ll be able to go in to the Fleet Management Dashboard and update the firmware on all sixteen of them because they&#39;re all going to be set as a product, so I can change their firmware from green lights to red lights, or something. Then do it again. Now, I&#39;m controlling them all running a new version of the firmware. </p>
+
+<p>This is a demo that I&#39;m going to put together and film to show people how these over the air firmware update features work at scale, and how you can deploy firmware updates to a larger fleet of devices. That will be cool. That&#39;s something I&#39;m just starting to work on. Clearly, I haven&#39;t gotten very far because all I have is this elastomer thing and one bit of printed bit and a circuit board. But, that means I&#39;m like half done because the rest of it&#39;s really easy anyway. Right?</p>
+
+<p><strong>Christine:</strong>  Yeah. Power of the product.</p>
+
+<p><strong>Zach:</strong>  I think the Dropcam is going to be the hardest thing to set up.</p>
+
+<p><strong>Christine:</strong>  Yeah. That&#39;s a lot of Dropcams.</p>
+
+<p><strong>Zach:</strong>  That&#39;s a lot of Dropcams. Yeah.</p>
+
+<p><strong>Christine:</strong>  That&#39;s a very large number of Dropcams.</p>
+
+<p><strong>Zach:</strong>  I&#39;ve got to get my iPad charged and my iPad has run out of batteries, so I&#39;m going to have to work on that.</p>
+
+<p><strong>Christine:</strong>  Yeah.</p>
+
+<p><strong>Zach:</strong>  Other then that...</p>
+
+<p><strong>Christine:</strong>  Cool</p>
+
+<p><strong>Zach:</strong>  All right.</p>
+
+<p><strong>Christine:</strong>  Well, Zach, thanks for coming in and chatting with us.</p>
+
+<p><strong>Zach:</strong>  Thank you for hosting.</p>
+
+<p><strong>Christine:</strong>  Hosting you here at the office in the conference room, five feet away from your desk.</p>
+
+<p><strong>Zach:</strong>  Yes. My desk is on the other side of that wall. So, I&#39;m really am not very far from home right now.</p>
+
+<p><strong>Christine:</strong>  All right. Cool</p>
+
+<p><strong>Zach:</strong>  Anyway. Goodbye everyone. Love you all.</p>
+
+<p><strong>Christine:</strong>  Bye. See you later</p>
+
+<p><strong>Zach:</strong>  See you later. If you have any questions and want to follow up on anything that we talked about here, I am @zach on the community, so let me know! We&#39;re out.</p>
+
+<p><strong>Christine:</strong>  Bye guys.</p>
+
+            
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="Particle Interactions: Sprint 44 with Zach Supalla (Transcript)" data-related="particle">Tweet</a>
+    </div>
+    
+    
+    <div>
+        <div class="fb-like" data-width="150" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    </div>
+    
+    
+    
+    
+    <div>
+        <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+    </div>
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               <img src="http://spark.github.io/staging-blog/images/christine.jpg">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/christinesunu" title="" target="_blank">Christine Sunu</a></strong><br>
+                <span class="muted">Community Engagement Manager</span>
+                </p>
+            </address>
+
+        </footer>
+
+        
+    </div>
+</article>
+
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2016
+
+        <nav>
+            <a href="https://www.particle.io/">Particle</a> &middot;
+            <a href="http://spark.github.io/staging-blog">Blog</a> &middot;
+            <a href="https://store.particle.io/">Product</a> &middot; 
+            
+        </nav>
+
+        <nav class="social">
+            
+            <a href="https://twitter.com/particle" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/sparkdevices" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+            
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://spark.github.io/staging-blog/assets/appear.js"></script>
+<script src="http://spark.github.io/staging-blog/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=253595308025739";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+    (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = '//hnbutton.appspot.com/static/hn.min.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-37038200-4', 'http://spark.github.io/staging-blog');
+  ga('send', 'pageview');
+</script>
+<script type="text/javascript" src="https://s3.amazonaws.com/redirect.particle.io/redirect-banner.js"></script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle Pomodoro: An Internet-connected Pomodoro Timer &mdash; Particle Blog</title>
+    
+    <link rel="stylesheet" href="http://spark.github.io/staging-blog/assets/main.css">
+    <link rel="shortcut icon" href="http://spark.github.io/staging-blog/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="http://spark.github.io/staging-blog/images/particle-horizontal-dark.png"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Particle Blog" />
+    <meta name="title" content="Particle Pomodoro: An Internet-connected Pomodoro Timer ">
+    <link rel="canonical" href="http://spark.github.io/staging-blog/2016/06/29/neopixels/">
+    
+    
+    <meta property="og:title" content="Particle Pomodoro: An Internet-connected Pomodoro Timer "/>
+    <meta property="og:url" content="http://spark.github.io/staging-blog/2016/06/29/neopixels/"/>
+    
+    <meta property="og:image" content="http://spark.github.io/staging-blog/images/particle-horizontal-dark.png"/>
+    
+    
+    <meta property="og:description" content="In this blog post, we're going to show you how to build an Internet-connected Pomodoro timer that measures you work and rest cycles and publishes them to Google Sheets for analysis."/>
+    <meta name="description" content="In this blog post, we're going to show you how to build an Internet-connected Pomodoro timer that measures you work and rest cycles and publishes them to Google Sheets for analysis."/>
+    
+    <meta property="og:site_name" content="Particle Blog">
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6107112/665726/css/fonts.css" />
+</head>
+<body>
+
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="https://www.particle.io/">
+                <img src="http://spark.github.io/staging-blog/images/particle-horizontal-dark.png" alt="Inc">
+            </a>
+            <a href="http://spark.github.io/staging-blog" class="home">Blog</a>
+            <a href="https://store.particle.io/">Product</a>
+            
+        </nav>
+        <nav class="tagline">
+          <a href="https://store.particle.io/" target="_blank" class="btn btn-outline">Buy Now</a>
+        </nav>
+    </header>
+</section>
+
+
+<div class="article-cover">
+    <div>
+        <img src="http://spark.github.io/staging-blog/images/triangles.png" class="image">
+    </div>
+</div>
+
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="Will Hart" target="_blank">Will Hart</a> &mdash;
+                <time pubdate datetime="2016-29-June" title="June 29, 2016">June 29, 2016</time>
+            </div>
+            <h1 class="title">Particle Pomodoro: An Internet-connected Pomodoro Timer</h1>
+            
+        </header>
+
+        <section>
+            <div class="full"><img src="http://spark.github.io/staging-blog/images/20166029-neopixels/pomodoro2.png"></div>
+
+<p>We&#39;re a big fan of productivity tools here at Particle--at any given moment, our collective backlog is stored between Asana, JIRA, Excel spreadsheets, Wunderlist, gantt charts, and good old fashioned sticky notes.</p>
+
+<p>Unfortunately, none of those tools actually <em>do</em> the work for you--for getting stuff done, we love the Pomodoro technique. Sure, there are plenty of free Pomodoro timers that you can download for your phone and computer, but everyone knows the best cure for a boatload of work is a good side-project, so we decided to build one ourselves (accelerated video below).</p>
+
+<p align="center">
+<iframe src="https://vine.co/v/5aDK7KQuMwX/embed/simple" width="400" height="400" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
+</p>
+
+<p>In this blog post, we&#39;re going to show you how to assemble a NeoPixel-powered, IoT Pomodoro Timer based on the <a href="https://store.particle.io/collections/shields-and-kits/#internet-button">Particle Internet Button</a> that logs your Pomodoro cycles to Google Sheets for later analysis.</p>
+
+<p align="center">
+<a class="btn" style="margin-left:auto;margin-right:auto;" href="https://store.particle.io/collections/shields-and-kits/#internet-button">Get an Internet Button</a>
+</p>
+
+<hr>
+
+<h2>How it Works</h2>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/20166029-neopixels/cycle.png"></div>
+
+<p>The Pomodoro Technique is simple--to keep yourself alert and productive, work in 25 minute intervals then give yourself a 5 minute break. A 25 minute work period and 5 minute rest period constitutes one &quot;pomodoro&quot;. After four cycles, you should give yourself a longer break of 15-30 minutes. Four cycles of work and rest is called a &quot;cycle&quot; or &quot;set&quot;.</p>
+
+<p>There are both software and hardware timers that you can buy to keep yourself in rhythm, such as Amazon&#39;s &quot;<a href="https://www.amazon.com/HomeFlav-Adorables-Kitchen-Timer-Tomato/dp/B00FEC2IRM/ref=sr_1_4?ie=UTF8&amp;qid=1467237578&amp;sr=8-4&amp;keywords=pomodoro+timer">HomeFlav Kitchen Timer Tomato</a>&quot;, or the <a href="https://itunes.apple.com/us/app/pomodoro-time-focus-timer/id973134470?mt=12">Pomodoro Time</a> app for Mac.</p>
+
+<p>Neither of these options, though, boast the best of both worlds--the satisfaction of mashing a physical button with the convenience and intelligence of the Cloud. Presenting <strong>Particle Pomodoro</strong>, a physical Pomodoro timer based on the <a href="https://store.particle.io/collections/shields-and-kits/#internet-button">Particle Internet Button</a> that displays your progress through working sets with pretty NeoPixel LEDs and logs your progress to Google sheets for later self-optimization.</p>
+
+<p><strong>Instructions</strong>:</p>
+
+<ul>
+<li><strong>Press button 2, 3, or 4 to start the Pomodoro timer.</strong> For 25 minutes, the LEDs along the outside edge will glow green. For the 5 minute rest period, they will glow purple.</li>
+<li><strong>Press button 1 to reset the timer</strong> at any time. It will beep to let you know it worked.</li>
+<li><strong>A pleasant melody will play</strong> at the end of the work period and at the end of the rest period</li>
+</ul>
+
+<hr>
+
+<h2>Hardware</h2>
+
+<p>To get started, you&#39;ll need just <strong>two things</strong>:  </p>
+
+<ul>
+<li><a href="https://store.particle.io/collections/shields-and-kits/#internet-button">Particle Internet Button</a></li>
+<li>15-20 minutes you&#39;d rather not spend on all the actual work you have to do</li>
+</ul>
+
+<p>Any NeoPixel ring or strip is an acceptable stand-in for the Internet Button, but note that you&#39;ll have to substitute the <code>NEOPIXEL</code> library for the <code>INTERNETBUTTON</code> library in the <code>Firmware</code> section of the tutorial below. You may have to make other tweaks to the firmware depending on the geometry and number of pixels in your chain/ring. You&#39;ll also need some sort of button or actuator to trigger the start of the Pomodoro cycle, and a magnetic buzzer if you want to hear pleasant 8-bit tones at the beginning and end of your work and rest cycles.</p>
+
+<p>None of these modifications should be too complicated, though, and we&#39;ve created a <a href="https://community.particle.io/t/particle-pomodoro-a-data-logging-pomodoro-timer/24158">thread in our forums</a> to discuss and troubleshoot the Pomodoro example that we&#39;ve built in this post.</p>
+
+<p><strong>Alternate Materials List</strong></p>
+
+<ul>
+<li>Particle Photon</li>
+<li>Neopixel Ring or strip (at least 11 LEDs)</li>
+<li>USB-Micro cable and 5V power source</li>
+<li>Two buttons (one for start, one for reset)</li>
+<li>[Optional] Magnetic buzzer<br></li>
+</ul>
+
+<hr>
+
+<h2>Firmware</h2>
+
+<p>If you haven&#39;t already, you&#39;ll need to setup and claim your Particle device. A full set of instructions for completing setup can be found in the video below, or at <a href="https://docs.particle.io/guide/getting-started/intro/photon/">http://particle.io/start</a>.</p>
+
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VFU8eMY0u1I" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>To check that you&#39;ve successfully claimed the Photon to your account, head over to our <a href="https://build.particle.io">Web IDE</a> to create and account or login.</p>
+
+<div width="560"><img src="http://spark.github.io/staging-blog/images/20166029-neopixels/login.png"></div>
+
+<p>Click on the &quot;Devices&quot; button on the left-hand side of the navigation bar--you should see your Photon in the device list on the left. I see my Photon, <code>Pomodoro</code>, so I&#39;m good to go!</p>
+
+<div width="560"><img src="http://spark.github.io/staging-blog/images/20166029-neopixels/devices.png"></div>
+
+<p>Click the star icon on the left of your Pomodoro device in order to target it. Next, copy and paste the firmware below into the application window, give your firmware file a name (<code>Pomodoro-Timer</code> is what we called ours), and click &quot;Save&quot;. Great! You&#39;ve now got the Pomodoro app loaded into the Web IDE, and are almost ready to flash it to your device.</p>
+
+<script src="https://gist.github.com/mohitbhoite/ba78e27338865288d28504cd2ead3813.js"></script>
+
+<p>Next, we need to add the <code>INTERNETBUTTON</code> library to our application (or <code>NEOPIXEL</code> library, if you&#39;re using another LED strip). To do that, click on the &quot;Libraries&quot; icon on the left-hand navigation bar, then click on the <code>INTERNETBUTTON</code> library under the &quot;Official Libraries&quot; section. Click the &quot;Include in App&quot; button to add it to your Pomodoro application.</p>
+
+<div width="560"><img src="http://spark.github.io/staging-blog/images/20166029-neopixels/include.png"></div>
+
+<p>Select the name of your Pomodoro firmware, and click the <code>Add to This App</code> button. You&#39;ll know that the library was added successfully if you see the following code snippet at the top of your Pomodoro application.</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/20166029-neopixels/statement.png"></div>
+
+<p>The final step is to flash the firmware to your device. Simply press the &quot;Flash&quot; icon at the top left-hand side of the navigation bar. You&#39;ll see your device flash magenta quickly, then flash green and cyan as it reconnects to your network.</p>
+
+<p><strong>Voila!</strong> Your Pomodoro Timer is officially online and activated! Press down on any of buttons 2, 3, or 4 to make sure it&#39;s working correctly--you should see the green dots illuminate on the outside edge during the 25 minute work period, followed by three purple dots during your 5 minute rest period.</p>
+
+<p>If you&#39;re using an <a href="https://store.particle.io/collections/shields-and-kits/#internet-button">Internet Button</a>, you&#39;ll hear a pleasant alarm sound at the end of your work and rest periods. Your full Pomodoro should look like the (accelerated) video below.</p>
+
+<p align="center">
+<iframe src="https://vine.co/v/5aDK7KQuMwX/embed/simple" width="400" height="400" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
+</p>
+
+<hr>
+
+<h2>Integrating with Google Sheets</h2>
+
+<p>The last step of the project is to log your productivity to Google Sheets for future analysis and self-optimization. This integration works via <a href="https://ifttt.com/">IFTTT.com</a>, so you&#39;ll want to start by heading there.</p>
+
+<p>Sign into your IFTTT account or sign up for a new one if you don&#39;t already have an account.</p>
+
+<div width="560"><img src="http://spark.github.io/staging-blog/images/20166029-neopixels/ifttt-login.png"></div>
+
+<p>Click on &quot;My Recipes&quot; at the top of the page to start the creation of your Pomodoro logging recipe. Select the following parameters in each of the Recipe steps:</p>
+
+<ul>
+<li><strong>Step 1:</strong> Select &quot;Particle&quot; from the integrations list</li>
+<li><strong>Step 2:</strong> Select &quot;New event published&quot;</li>
+<li><strong>Step 3:</strong> Enter &quot;Pomo&quot; in the <code>If (Event Name)</code> field, and select your device in the <code>Device Name or ID</code> field.</li>
+<li><strong>Step 4:</strong> Select &quot;Google Drive&quot; from the integrations list. You may have to connect your Google Drive account to IFTTT if you have not done so already.</li>
+<li><strong>Step 5:</strong> Select &quot;Add row to spreadsheet&quot;</li>
+<li><strong>Step 6:</strong> Feel free to leave all the default contents here--we deleted the &quot;Device Name&quot; field in the <code>Formatted row</code> section since we only have one device running the firmware.</li>
+<li><strong>Step 7:</strong> Create the recipe!</li>
+</ul>
+
+<p>If you did everything right, your configuration settings should look like this:</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/20166029-neopixels/config.png"></div>
+
+<p>That&#39;s it! If everything is working correctly, a new Google Sheet will be created in your Drive that logs the start and stop times of your work and rest periods. After starting a new sequence, you should see a new Google Sheet in your Drive titled <code>Pomo</code> that has entries that look something like this:</p>
+
+<div width="560"><img src="http://spark.github.io/staging-blog/images/20166029-neopixels/logging.png"></div>
+
+<h3>Enjoy! Best wishes from Particle for a productive week :-)</h3>
+
+            
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="Particle Pomodoro: An Internet-connected Pomodoro Timer" data-related="particle">Tweet</a>
+    </div>
+    
+    
+    <div>
+        <div class="fb-like" data-width="150" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    </div>
+    
+    
+    
+    
+    <div>
+        <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+    </div>
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               <img src="http://spark.github.io/staging-blog/images/will.jpg">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/brandoaire" title="" target="_blank">Will Hart</a></strong><br>
+                <span class="muted">General Manager at Particle</span>
+                </p>
+            </address>
+
+        </footer>
+
+        
+    </div>
+</article>
+
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2016
+
+        <nav>
+            <a href="https://www.particle.io/">Particle</a> &middot;
+            <a href="http://spark.github.io/staging-blog">Blog</a> &middot;
+            <a href="https://store.particle.io/">Product</a> &middot; 
+            
+        </nav>
+
+        <nav class="social">
+            
+            <a href="https://twitter.com/particle" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/sparkdevices" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+            
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://spark.github.io/staging-blog/assets/appear.js"></script>
+<script src="http://spark.github.io/staging-blog/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=253595308025739";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+    (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = '//hnbutton.appspot.com/static/hn.min.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-37038200-4', 'http://spark.github.io/staging-blog');
+  ga('send', 'pageview');
+</script>
+<script type="text/javascript" src="https://s3.amazonaws.com/redirect.particle.io/redirect-banner.js"></script>
+</body>
+</html>

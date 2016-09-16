@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photon Changelog &mdash; Particle Blog</title>
+    
+    <link rel="stylesheet" href="http://spark.github.io/staging-blog/assets/main.css">
+    <link rel="shortcut icon" href="http://spark.github.io/staging-blog/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="http://spark.github.io/staging-blog/images/particle-horizontal-dark.png"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Particle Blog" />
+    <meta name="title" content="Photon Changelog ">
+    <link rel="canonical" href="http://spark.github.io/staging-blog/2015/05/15/photon-changelog/">
+    
+    
+    <meta property="og:title" content="Photon Changelog "/>
+    <meta property="og:url" content="http://spark.github.io/staging-blog/2015/05/15/photon-changelog/"/>
+    
+    <meta property="og:image" content="http://spark.github.io/staging-blog/images/particle-horizontal-dark.png"/>
+    
+    
+    <meta property="og:description" content="A lot has changed between the Spark Core and the Photon. Here's what's new."/>
+    <meta name="description" content="A lot has changed between the Spark Core and the Photon. Here's what's new."/>
+    
+    <meta property="og:site_name" content="Particle Blog">
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6107112/665726/css/fonts.css" />
+</head>
+<body>
+
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="https://www.particle.io/">
+                <img src="http://spark.github.io/staging-blog/images/particle-horizontal-dark.png" alt="Inc">
+            </a>
+            <a href="http://spark.github.io/staging-blog" class="home">Blog</a>
+            <a href="https://store.particle.io/">Product</a>
+            
+        </nav>
+        <nav class="tagline">
+          <a href="https://store.particle.io/" target="_blank" class="btn btn-outline">Buy Now</a>
+        </nav>
+    </header>
+</section>
+
+
+<div class="article-cover">
+    <div>
+        <img src="http://spark.github.io/staging-blog/images/triangles.png" class="image">
+    </div>
+</div>
+
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="Zach Supalla" target="_blank">Zach Supalla</a> &mdash;
+                <time pubdate datetime="2015-15-May" title="May 15, 2015">May 15, 2015</time>
+            </div>
+            <h1 class="title">Photon Changelog</h1>
+            
+        </header>
+
+        <section>
+            <div class="full"><img src="http://spark.github.io/staging-blog/images/photon-panel.jpg"></div>
+
+<p>Today, after long last, we&#39;re shipping the Photon!</p>
+
+<p>Over the past two years, we&#39;ve shipped 50,000 Spark Cores to customers all over the world. We learned a lot from our first product, and we&#39;ve fed those learnings into the development of the Photon. The Photon is better than the Spark Core in every way, and we couldn&#39;t be more excited to share it with you.</p>
+
+<p>The Photon is designed to be backwards compatible with the Spark Core, but there are some differences that you should be aware of if you&#39;ve been using a Spark Core. Most of these changes are dramatic improvements, but they are differences nonetheless.</p>
+
+<p>There&#39;s a lot of content here, so if you want just the summary, here you go:</p>
+
+<ul>
+<li>The Photon includes a <strong>more powerful and more reliable Wi-Fi module</strong>, and you&#39;ll have a lot more RAM and processing power at your disposal.</li>
+<li>There are a bunch of <strong>new hardware peripherals</strong>, and the Photon can be surface mounted (if you buy it without headers).</li>
+<li><strong>We now have our own modules</strong>, the PØ and the P1, for sale alongside the Photon. Great for when you want to scale up manufacturing.</li>
+<li>The firmware <strong>includes a full RTOS</strong> (Real Time Operating System), and the Wi-Fi connectivity code will soon run alongside your code in a more intelligent way than it did on the Spark Core.</li>
+<li>We&#39;ve made some awesome changes to our firmware to separate your code from the system code so that <strong>over-the-air firmware updates are BLAZING fast</strong> (a couple seconds to update).</li>
+<li><strong>We fixed lots of bugs</strong>. Most of those fixes (and many of the improvements) will be available on the Spark Core as well in a few weeks, including significant reductions in memory consumption (both FLASH and RAM).</li>
+</ul>
+
+<p>Ok! Now, for those who want all the details, let&#39;s dive into what&#39;s changed:</p>
+
+<h3>Hardware</h3>
+
+<p><strong>From Texas Instruments to Broadcom.</strong> The Spark Core used a Wi-Fi module from Texas Instruments called the CC3000. The Photon includes an upgrade to our own Wi-Fi module - the PØ - which includes a Broadcom Wi-Fi chip (BCM43362) and a souped up microcontroller (STM32F205). Broadcom makes the Wi-Fi chips in most routers and phones, so their chips are best-in-class. Expect big improvements in stability.</p>
+
+<p><strong>Power consumption has been dramatically reduced, and you have access to better low power modes.</strong> Simply due to hardware changes (a better Wi-Fi chip and a switch-mode power supply), average power consumption has dropped from ~150mA on the Spark Core to ~80mA on the Photon. In addition, the Photon has many more options for low power modes, including modes where you can trade off Wi-Fi latency for power consumption, bringing your power consumption down closer to ~15mA. And if you&#39;re creating a battery-powered product, you can put the Photon entirely to sleep and achieve power consumption as low as 160uA.</p>
+
+<p><strong>The Photon is surface mountable</strong>. Most of you have ordered Photons with headers, which fit into a breadboard and are great for prototyping. We also sell Photons without headers, which can be soldered directly to a circuit board either with a soldering iron or with a reflow oven (using castellated edges). When you mount the Photon down to a PCB, you also have access to the USB data lines, the LED pins, and the SETUP button pin so that you can expose those features on your own circuit board.</p>
+
+<p><strong>The Photon has two different antenna options on every board.</strong> Every Photon includes both a chip antenna and a u.FL connector (for external antennas). By default, the Photon will use the chip antenna, but you can switch to the u.FL connector with one line of code.</p>
+
+<p><strong>The Photon has lots of new peripherals available</strong>. The Spark Core had UART, SPI, and I2C peripherals exposed, as well as ADCs (analog pins) and timers (PWM pins). The Photon has the same capabilities, plus a second SPI bus, two Digital to Analog Converters (DAC), a CAN bus, and I2S. These peripherals are not all supported in software yet, but they will be supported soon. The WAKEUP and VBAT pins are also exposed, which helps with low power modes.</p>
+
+<p><strong>Cleaner layout and fancy colors</strong>. We did some fancy footwork with the hardware design to make it extra pretty. The most noticeable changes are that the LED on D7 is exactly where you&#39;d expect it to be, and we&#39;ve adopted a new color scheme: matte black soldermask and cyan silkscreen.</p>
+
+<p><strong>A few things were removed</strong>. We took off the external flash to save space (since we had a lot more internal flash to work with), and removed the A6 and 3V3* pins to make room for other new features. If you want external flash, check out our P1 module, which includes external flash inside the Wi-Fi module.</p>
+
+<p><strong>We&#39;ve got our own Wi-Fi modules for manufacturing at scale.</strong> The PØ, the module inside the Photon, is available for $10/unit (cloud service included). We also sell a variation called the P1 which is a tad bigger than the PØ but includes an antenna and external flash; the P1 is available for $12/unit (cloud service included). Both of these modules include the STM32F205 microcontroller, so you don&#39;t need an additional processor to run your device.</p>
+
+<h3>Firmware</h3>
+
+<p><strong>We decreased the time to do an Over-the-Air firmware update from more than a minute to just a few seconds.</strong> One of the biggest issues with the Spark Core was that over-the-air firmware updates could be somewhat slow, taking a minute or more. This slows down development, so people would do their development locally and program over USB. We&#39;ve made some improvements (detailed below) that <em>dramatically</em> increase the speed of an OTA update so most updates now take just a couple of seconds. We hope that will speed up your development and make the cloud a bit more useful.</p>
+
+<p><strong>We built a Hardware Abstraction Layer (HAL).</strong> In order to compile one firmware application against two different target architectures (the Core and the Photon), we built a Hardware Abstraction Layer, or HAL, that makes it much more straightforward to port our firmware libraries to any hardware! This HAL also made possible <a href="http://www.bluz.io">Bluz</a> and will be used heavily in the Electron. We can&#39;t wait to see which hardware platforms you&#39;ll adapt our firmware libraries to next!</p>
+
+<p><strong>We combined and simplified our firmware libraries into one repository.</strong> Our firmware used to be broken up into three libraries: the core firmware library, the communication library, and the library of common drivers. We&#39;ve now combined all of our firmware <a href="https://www.github.com/spark/firmware">into one repository</a> and reorganized the firmware so it&#39;s easier to pull out separate bits and pieces if you need them.</p>
+
+<p><strong>We added an RTOS (FreeRTOS) to provide scheduling for the Wi-Fi connectivity code.</strong> <a href="http://en.wikipedia.org/wiki/Real-time_operating_system">Real-time operating systems</a>, or RTOSes, provide some of the features of a full operating system but with a very small amount of overhead. Professional engineers working with microcontrollers will typically use an RTOS to add multithreading and lightweight memory management while still allowing real-time hardware interactions that a system with a full OS (e.g. Linux) would not be able to do. We&#39;ve implemented FreeRTOS on the Photon so that we can run the system code (mostly connectivity stuff) and your application in two separate threads. You can also use the RTOS for your own multithreaded code; as we iterate on our firmware, we&#39;ll be providing simple APIs to help you do this in an Arduino-y kind of way.</p>
+
+<p><strong>We separated the system code and your application code into three separate binaries that are dynamically linked and can be reprogrammed separately.</strong> A lot of the improvements in OTA speeds came from separating system and application code. The system code can be hundreds of kilobytes, whereas your application code might only be a few KB. If an OTA update requires rewriting the entire program as it does on the Core, that means we&#39;re spending a lot of time downloading the same system code that&#39;s already on the device. By splitting the system and application, we can provide a faster and lower-risk over-the-air firmware update.</p>
+
+<p>We made lots of smaller improvements to performance and stability. These improvements will be released as firmware v0.4.0, which will be available on the Spark Core as well in a few weeks. Here&#39;s a comprehensive list of the improvements we&#39;ve made:</p>
+
+<p><strong>Enhancements:</strong></p>
+
+<ul>
+<li><code>loop()</code> iteration rate increased by 1000 times - from 200 Hz to over 200 kHz!</li>
+<li>Compiler: Removed all warnings from the compile (and made warnings as errors) so compiler output is minimal.</li>
+<li>Debugging: SWD Support, thanks to Elco Jacobs. <a href="https://github.com/spark/core-firmware/pull/337">#337</a></li>
+<li><code>Spark.publish()</code> returns a success value - <a href="https://github.com/spark/firmware/issues/388">#388</a></li>
+<li><code>Spark.process()</code> as the public API for running the system loop. <a href="https://github.com/spark/firmware/issues/347">#347</a></li>
+<li>Sleep no longer resets (on the Photon) <a href="https://github.com/spark/firmware/issues/283">#283</a></li>
+<li>Support for application code outside of the firmware repo. <a href="https://github.com/spark/firmware/issues/374">#374</a></li>
+<li>MAC Address available in setup via &#39;m&#39; key. <a href="https://github.com/spark/firmware/issues/352">#352</a></li>
+<li>SoftAP setup on the Photon</li>
+<li><code>Spark.sleep()</code> changed to <code>System.sleep()</code> and similarly for <code>deviceID()</code> <a href="https://github.com/spark/firmware/issues/390">#390</a></li>
+<li>Listening mode uses existing serial connection if already opened. <a href="https://github.com/spark/firmware/issues/384">#384</a></li>
+<li><code>Spark.publish(&quot;event&quot;, PRIVATE)</code> shorthand - <a href="https://github.com/spark/firmware/issues/376">#376</a></li>
+<li>Improved integrity checks for firmware images</li>
+<li>Added additional safe/recovery mode in bootloader (&gt; 6.5 sec : restore factory code without clearing wifi credentials)</li>
+<li>Enabled CRC verification in bootloader before restoring/copying the firmware image from factory reset, ota downloaded area etc.</li>
+<li>Added &#39;program-serial&#39; to build target to enter serial ymodem protocol for flashing user firmware (Testing pending...)</li>
+<li>Cloud string variables can be re-defined <a href="https://github.com/spark/firmware/issues/241">#241</a></li>
+<li>Removed hard-coded limit on number of functions and variables <a href="https://github.com/spark/firmware/issues/111">#111</a></li>
+<li>Parameterized function callbacks, lambda support for functions <a href="https://github.com/spark/firmware/issues/313">#311</a></li>
+<li>C++ STL headers supported</li>
+<li>Can duplicate the onboard RGB LED color in firmware. <a href="https://github.com/spark/firmware/issues/302">#302</a></li>
+<li><code>WiFi.selectAntenna()</code> - select between internal (chip) and external (u.FL) antenna on Photon: <a href="https://github.com/spark/firmware/issues/394">#394</a></li>
+<li><code>WiFi.resolve()</code> to look up an IP address from a domain name. <a href="https://github.com/spark/firmware/issues/91">#91</a></li>
+<li><code>System.dfu()</code> to reboot the core in dfu mode, until next reset or next DFU update is received.</li>
+</ul>
+
+<p><strong>Bugfixes:</strong></p>
+
+<ul>
+<li>SOS calling <code>Spark.publish()</code> in <code>SEMI_AUTOMATIC</code>/<code>MANUAL</code> mode</li>
+<li>Subscriptions maintained when cloud disconnected. <a href="https://github.com/spark/firmware/issues/278">#278</a></li>
+<li>Fix for events with composite names. <a href="https://github.com/spark/firmware/issues/382">#382</a></li>
+<li><code>WiFi.ready()</code> returning true after <code>WiFi.off()</code> in manual mode. <a href="https://github.com/spark/firmware/issues/378">#378</a></li>
+<li><code>Serial.peek()</code> implemented. <a href="https://github.com/spark/firmware/issues/387">#387</a></li>
+<li>Mode button not working in semi-automatic or manual mode. <a href="https://github.com/spark/firmware/issues/343">#343</a></li>
+<li><code>Time.timeStr()</code> had a newline at the end. <a href="https://github.com/spark/firmware/issues/336">#336</a></li>
+<li><code>WiFi.RSSI()</code> caused panic in some cases. <a href="https://github.com/spark/firmware/issues/377">#377</a></li>
+<li><code>Spark.publish()</code> caused SOS when cloud disconnected. <a href="https://github.com/spark/firmware/issues/332">#322</a></li>
+<li><code>TCPClient.flush()</code> discards data in the socket layer also. <a href="https://github.com/spark/firmware/issues/416">#416</a></li>
+</ul>
+
+<h4>More to come</h4>
+
+<p>We still consider our platform a work-in-progress, and while this is a huge step forward for us, it&#39;s still just one more step on the journey. We&#39;re eager for your feedback; if you encounter bugs or want to request new features when you receive your Photon, <a href="https://github.com/spark/firmware/issues">create a Github issue</a> or contribute a Pull Request; we&#39;d love your help!</p>
+
+            
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="Photon Changelog" data-related="particle">Tweet</a>
+    </div>
+    
+    
+    <div>
+        <div class="fb-like" data-width="150" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    </div>
+    
+    
+    
+    
+    <div>
+        <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+    </div>
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               <img src="http://spark.github.io/staging-blog/images/zach.jpg">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/zsupalla" title="" target="_blank">Zach Supalla</a></strong><br>
+                <span class="muted">CEO</span>
+                </p>
+            </address>
+
+        </footer>
+
+        
+    </div>
+</article>
+
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2016
+
+        <nav>
+            <a href="https://www.particle.io/">Particle</a> &middot;
+            <a href="http://spark.github.io/staging-blog">Blog</a> &middot;
+            <a href="https://store.particle.io/">Product</a> &middot; 
+            
+        </nav>
+
+        <nav class="social">
+            
+            <a href="https://twitter.com/particle" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/sparkdevices" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+            
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://spark.github.io/staging-blog/assets/appear.js"></script>
+<script src="http://spark.github.io/staging-blog/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=253595308025739";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+    (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = '//hnbutton.appspot.com/static/hn.min.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-37038200-4', 'http://spark.github.io/staging-blog');
+  ga('send', 'pageview');
+</script>
+<script type="text/javascript" src="https://s3.amazonaws.com/redirect.particle.io/redirect-banner.js"></script>
+</body>
+</html>

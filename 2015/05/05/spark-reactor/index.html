@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defeat Ultron with your own Iron Man Arc Reactor &mdash; Particle Blog</title>
+    
+    <link rel="stylesheet" href="http://spark.github.io/staging-blog/assets/main.css">
+    <link rel="shortcut icon" href="http://spark.github.io/staging-blog/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="http://spark.github.io/staging-blog/images/particle-horizontal-dark.png"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Particle Blog" />
+    <meta name="title" content="Defeat Ultron with your own Iron Man Arc Reactor ">
+    <link rel="canonical" href="http://spark.github.io/staging-blog/2015/05/05/spark-reactor/">
+    
+    
+    <meta property="og:title" content="Defeat Ultron with your own Iron Man Arc Reactor "/>
+    <meta property="og:url" content="http://spark.github.io/staging-blog/2015/05/05/spark-reactor/"/>
+    
+    <meta property="og:image" content="http://spark.github.io/staging-blog/images/particle-horizontal-dark.png"/>
+    
+    
+    <meta property="og:description" content="Be like Tony Stark with this Iron Man-esque Repulsor glove and Arc Reactor"/>
+    <meta name="description" content="Be like Tony Stark with this Iron Man-esque Repulsor glove and Arc Reactor"/>
+    
+    <meta property="og:site_name" content="Particle Blog">
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6107112/665726/css/fonts.css" />
+</head>
+<body>
+
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="https://www.particle.io/">
+                <img src="http://spark.github.io/staging-blog/images/particle-horizontal-dark.png" alt="Inc">
+            </a>
+            <a href="http://spark.github.io/staging-blog" class="home">Blog</a>
+            <a href="https://store.particle.io/">Product</a>
+            
+        </nav>
+        <nav class="tagline">
+          <a href="https://store.particle.io/" target="_blank" class="btn btn-outline">Buy Now</a>
+        </nav>
+    </header>
+</section>
+
+
+<div class="article-cover">
+    <div>
+        <img src="http://spark.github.io/staging-blog/images/blog-cover.jpg" class="image">
+    </div>
+</div>
+
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="Christine Sunu" target="_blank">Christine Sunu</a> &mdash;
+                <time pubdate datetime="2015-05-May" title="May 05, 2015">May 05, 2015</time>
+            </div>
+            <h1 class="title">Defeat Ultron with your own Iron Man Arc Reactor</h1>
+            
+        </header>
+
+        <section>
+            <div class="full"><img src="http://spark.github.io/staging-blog/images/spark-reactor.jpg"></div>
+
+<p>Last week, the Avengers: Age of Ultron premiered in the US. We were pretty excited about it, so we decided to honor our favorite heroic maker, Tony Stark.</p>
+
+<p>(Like a true DIY-er, Tony builds things with what he has, in a cave, from a box of scraps.)</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/iron-man-cave-suit.gif"></div>
+
+<p>In honor of Iron Man and his Avengers buddies, we built the Repulsor and Arc Reactor - or as we like to call it, the Spark Reactor.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ljun-rWNOmE" frameborder="0" allowfullscreen></iframe>
+
+<p>Want to build one of your own? We’ll break down how to build and program the Repulsor, the servo, and the Spark Reactor. </p>
+
+<h4>The Repulsor</h4>
+
+<p>The Repulsor is made of a <a href="https://store.spark.io/?product=spark-core&amp;utm_source=blog&amp;utm_medium=product&amp;utm_campaign=ironman">Core</a> and <a href="https://store.spark.io/?product=internet-button&amp;utm_source=blog&amp;utm_medium=product&amp;utm_campaign=ironman">Internet Button</a>. This project will also be easy to replicate with the new <a href="https://store.spark.io/?product=spark-photon&amp;utm_source=blog&amp;utm_medium=product&amp;utm_campaign=ironman">Photon</a>. You can solder a JST connector onto the back of the Button if you don&#39;t want to deal with wires.</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/repulsor.png"></div>
+
+<p>The Repulsor uses the <a href="https://store.spark.io/?product=internet-button&amp;utm_source=blog&amp;utm_medium=product&amp;utm_campaign=ironman">Internet Button</a>&#39;s built-in accelerometer to determine what position your hand is in. It sets its colors and sounds based on the button&#39;s orientation. Therefore, it will only &quot;charge&quot; when your hand is holding it, USB-port down, at about a 30 degree angle from the ground. It will only be &quot;fully charged&quot; when your hand is at a 90 degree angle from the ground. It will only &quot;discharge&quot; when fully charged and thrust forward.</p>
+
+<p><iframe src="https://vine.co/v/eZ5KXKQxEew/embed/simple" width="600" height="600" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script></p>
+
+<p>Upon discharge, the Repulsor publishes a <code>fire_repulsor</code> event to the cloud. Basically, it notifies the cloud that something happened, and any devices or websites listening in for that event get the word. You can see the code for the Repulsor below:</p>
+
+<script src="https://gist.github.com/cmsunu28/f06e213f12389e08374f.js"></script>
+
+<h4>The Servo</h4>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/spark-reactor-servo.png"></div>
+
+<p>While I was building the Repulsor, my good buddy-- Office Manager James Jarvey-- was building simple servo that would listen in for the <code>fire_repulsor</code> event.</p>
+
+<p>James wired the servo up like this...</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/spark-reactor-servo-fritzing.png"></div>
+
+<p>...And loaded the following code to his own Spark Core:</p>
+
+<script src="https://gist.github.com/cmsunu28/6476e253d7a2b93d333c.js"></script>
+
+<p>The servo is subscribed to the cloud, listening specifically for the <code>fire_repulsor</code> event. Note that even though the Core was claimed to James&#39;s account, it can still listen for a <a href="docs">public event</a> published from someone else&#39;s Core, in this case, mine. We could also have made the event private and loaded this code to a core on my account instead. If you want to do that, then uncomment and comment the indicated code in each app to change the privacy of subscribe and publish.</p>
+
+<p>When I fire the repulsor, the <code>fire_repulsor</code> event is published. The servo gets wind of that event and triggers the `` function, which in turn tells the servo to spasm.</p>
+
+<p><iframe src="https://vine.co/v/eZ5qI0I2TWE/embed/simple" width="600" height="600" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script></p>
+
+<h4>The Spark Reactor</h4>
+
+<p>We also made what we&#39;re calling the Spark Reactor, a chest piece to wear when you fire your repulsor.</p>
+
+<p><iframe src="https://vine.co/v/eZ5q2zLIbBV/embed/simple" width="600" height="600" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script></p>
+
+<p>The Spark Reactor breathes blue-tinted light, and it flashes yellow when the repulsor is fired.</p>
+
+<p><iframe src="https://vine.co/v/eZ5he1BVPJX/embed/simple" width="600" height="600" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script></p>
+
+<p>The basic principle behind the Spark Reactor is similar to the servo-- it is subscribed to the cloud for the <code>fire_repulsor</code> event. When it hears that that event is published, it triggers the <code>lightResponse</code> function, which changes the state of the Spark Reactor so that it flashes yellow.</p>
+
+<p>Because math is awesome, this program uses a sin function to calculate the color and brightness of the LED as it breathes, and a linear function for the flash response. This means you can change the parameters a bit if you need the LED to be faster, slower, or a different color.</p>
+
+<script src="https://gist.github.com/cmsunu28/9beab454c7db8f43a838.js"></script>
+
+<h4>Including the Spark Button Library</h4>
+
+<p>When you create these apps, don&#39;t forget to include the Spark Button library.</p>
+
+<p>After you paste the code into your <a href="http://build.spark.io/?utm_source=blog&amp;utm_medium=build&amp;utm_campaign=ironman">build environment</a>, save the app and go to the library drawer on the botton left. Select the Spark Button library.</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/library-select.png"></div>
+
+<p>Then, select &quot;Include In App.&quot;</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/library-include.png"></div>
+
+<p>Select your app.</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/library-include-app.png"></div>
+
+<p>An <code>#include</code> statement will get added to your app:</p>
+
+<div class="full"><img src="http://spark.github.io/staging-blog/images/library-include-statement.png"></div>
+
+<p>Feel free to delete this if it is already there; the important thing is that the library is now a part of your app.</p>
+
+<h4>In Conclusion...</h4>
+
+<p>Put it all together, and you&#39;re ready to defeat Ultron and reclaim your bananas. Guaranteed defeat of action-figure-sized Ultron only. Have fun!</p>
+
+<p><a class="btn" href="https://store.spark.io/?product=internet-button&utm_source=blog&utm_medium=button&utm_campaign=ironman">Buy an Internet Button</a></p>
+
+            
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="Defeat Ultron with your own Iron Man Arc Reactor" data-related="particle">Tweet</a>
+    </div>
+    
+    
+    <div>
+        <div class="fb-like" data-width="150" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    </div>
+    
+    
+    
+    
+    <div>
+        <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+    </div>
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               <img src="http://spark.github.io/staging-blog/images/christine.jpg">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/christinesunu" title="" target="_blank">Christine Sunu</a></strong><br>
+                <span class="muted">Community Engagement Manager</span>
+                </p>
+            </address>
+
+        </footer>
+
+        
+    </div>
+</article>
+
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2016
+
+        <nav>
+            <a href="https://www.particle.io/">Particle</a> &middot;
+            <a href="http://spark.github.io/staging-blog">Blog</a> &middot;
+            <a href="https://store.particle.io/">Product</a> &middot; 
+            
+        </nav>
+
+        <nav class="social">
+            
+            <a href="https://twitter.com/particle" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/sparkdevices" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+            
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://spark.github.io/staging-blog/assets/appear.js"></script>
+<script src="http://spark.github.io/staging-blog/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=253595308025739";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+    (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = '//hnbutton.appspot.com/static/hn.min.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-37038200-4', 'http://spark.github.io/staging-blog');
+  ga('send', 'pageview');
+</script>
+<script type="text/javascript" src="https://s3.amazonaws.com/redirect.particle.io/redirect-banner.js"></script>
+</body>
+</html>
