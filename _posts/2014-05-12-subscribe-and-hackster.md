@@ -16,7 +16,7 @@ author:
 ## Spark.subscribe()
 
 The Spark team is super proud to release in
-[v0.2.2](https://github.com/spark/core-firmware/releases/tag/spark_5)
+[v0.2.2](https://github.com/particle-iot/core-firmware/releases/tag/spark_5)
 a much anticipated feature: `Spark.subscribe()`.
 Now it's easier than ever to pass messages from one Core to another.
 

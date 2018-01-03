@@ -77,7 +77,7 @@ and the old certificates have been revoked.
 
 We deployed the latest and greatest firmware to the web IDE.
 The tagged stable release is downloadable from the
-[core-firmware releases](https://github.com/spark/core-firmware/releases)
+[core-firmware releases](https://github.com/particle-iot/core-firmware/releases)
 page on GitHub.
 You'll see commit links in the settings drawer if you click to expand the version.
 
@@ -91,15 +91,15 @@ My favorite? You can now download your compiled binaries and flash them over USB
 Highlighted changes from v0.2.0 to v0.2.1:
 
 * OTA reliability improvements
-  ([core-firmware](https://github.com/spark/core-firmware/pull/155),
-  [core-common-lib](https://github.com/spark/core-common-lib/pull/19),
-  [core-communication-lib](https://github.com/spark/core-communication-lib/pull/8))
+  ([core-firmware](https://github.com/particle-iot/core-firmware/pull/155),
+  [core-common-lib](https://github.com/particle-iot/core-common-lib/pull/19),
+  [core-communication-lib](https://github.com/particle-iot/core-communication-lib/pull/8))
 * Allow Spark.publish inside Spark.function
-  ([core-communication-lib](https://github.com/spark/core-communication-lib/pull/13))
-* Add Network.ping() ([core-firmware](https://github.com/spark/core-firmware/pull/156))
+  ([core-communication-lib](https://github.com/particle-iot/core-communication-lib/pull/13))
+* Add Network.ping() ([core-firmware](https://github.com/particle-iot/core-firmware/pull/156))
 * Enable factory reset from firmware (only on new bootloader)
-  ([core-common-lib](https://github.com/spark/core-common-lib/pull/21),
-  [bootloader](https://github.com/spark/bootloader/pull/9))
+  ([core-common-lib](https://github.com/particle-iot/core-common-lib/pull/21),
+  [bootloader](https://github.com/particle-iot/bootloader/pull/9))
 
 Version 0.2.1 is being programmed on the current manufacturing run.
 

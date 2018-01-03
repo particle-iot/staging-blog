@@ -25,7 +25,7 @@ When you open an example app, you can fork it into your own apps in order to edi
 
 <div class="full zoomable"><img src="/images/fork.png"></div>
 
-These apps are populated from a Github repository at [github.com/spark/examples](http://www.github.com/spark/examples).
+These apps are populated from a Github repository at [github.com/particle-iot/examples](http://www.github.com/particle-iot/examples).
 
 <div class="full zoomable"><img src="/images/github-examples.png"></div>
 

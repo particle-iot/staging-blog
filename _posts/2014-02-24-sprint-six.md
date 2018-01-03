@@ -59,7 +59,7 @@ will tell you all the commands available. Here are some of my favorites:
 
 `spark serial wifi` will help you connect your Core to your Wi-Fi network.
 
-There's lots more where that came from; for a full list of available commands, simply type `spark` in your terminal, or visit the [Github repository](https://github.com/spark/spark-cli).
+There's lots more where that came from; for a full list of available commands, simply type `spark` in your terminal, or visit the [Github repository](https://github.com/particle-iot/spark-cli).
 
 And speaking of Github...
 
@@ -73,7 +73,7 @@ Using the Github tools we've made available, you can star a repository to follow
 
 <div class="full"><img src="/images/waffle.png"></div>
 
-Starting with the [core-firmware](https://www.github.com/spark/core-firmware) repository, we're sharing our backlog with the community to get your feedback about our priorities and to get your help and input wherever you're willing to provide it. Workflows for other repositories will go live over the next couple of weeks.
+Starting with the [core-firmware](https://www.github.com/particle-iot/core-firmware) repository, we're sharing our backlog with the community to get your feedback about our priorities and to get your help and input wherever you're willing to provide it. Workflows for other repositories will go live over the next couple of weeks.
 
 ### Other stuff
 

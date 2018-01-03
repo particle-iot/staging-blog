@@ -47,7 +47,7 @@ understand the colors of the RGB LED on the Core.
 There's also a
 [new annotated example](http://docs.spark.io/#/examples/local-communication)
 showing how to do local communicaton with your Core.
-Simple [example servers](https://github.com/spark/local-communication-example)
+Simple [example servers](https://github.com/particle-iot/local-communication-example)
 are on GitHub in ruby and node.js.
 
 Two big forum posts in case you missed them:

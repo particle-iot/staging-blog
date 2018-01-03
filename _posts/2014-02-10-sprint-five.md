@@ -33,7 +33,7 @@ This is the first step on a longer journey to make it easy to import and share l
 
 The Spark Android app is now open source, ready to act as a template for your own mobile apps for your Spark-powered products.
 
-[Spark Android app on Github](https://github.com/spark/android-app)
+[Spark Android app on Github](https://github.com/particle-iot/android-app)
 
 We haven't yet been able to secure permission to re-distribute TI's Smart Config libraries, so they have been removed from the open source project, along with Gotham, the fonts we used to make it all pretty. If you're building the Android app yourself, please follow the README to re-introduce these assets and make sure that the project will be able to build successfully.
 
